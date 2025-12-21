@@ -39,6 +39,15 @@ const Footer = () => {
                     </div>
 
                     <div>
+                        <h3 style={{ marginBottom: '1.5rem', fontSize: '1.2rem' }}>Trusted Partners</h3>
+                        <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', opacity: 0.8 }}>
+                            <li><a href="https://frayze.ca" target="_blank" rel="noopener noreferrer">Frayze.ca (Growth Engine)</a></li>
+                            <li><a href="https://autocorp.ai" target="_blank" rel="noopener noreferrer">AutoCorp.ai (Secure Trade)</a></li>
+                            <li><a href="https://jctrainingacademy.thinkific.com/" target="_blank" rel="noopener noreferrer">Thinkific Portal</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
                         <h3 style={{ marginBottom: '1.5rem', fontSize: '1.2rem' }}>North American Hub</h3>
                         <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', opacity: 0.8 }}>
                             <li style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -57,8 +66,19 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div style={{ pt: '40px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', textAlign: 'center', opacity: 0.5, fontSize: '0.9rem' }}>
+                <div style={{ pt: '40px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', textAlign: 'center', opacity: 0.5, fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
                     <p>&copy; {new Date().getFullYear()} JC Training & Development. All Rights Reserved.</p>
+                    <div style={{ display: 'flex', gap: '2rem' }}>
+                        <Link to="/privacy" style={{ color: 'white', textDecoration: 'none' }}>Privacy Policy</Link>
+                        <Link to="/terms" style={{ color: 'white', textDecoration: 'none' }}>Terms and Conditions</Link>
+                    </div>
+                </div>
+
+                {/* SEO Hidden Links */}
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem', fontSize: '0.8rem', opacity: 0.3 }}>
+                    <Link to="/locations/toronto" style={{ color: 'inherit' }}>Sales Training Toronto</Link> |
+                    <Link to="/locations/myrtle-beach" style={{ color: 'inherit' }}>Leadership Myrtle Beach</Link> |
+                    <Link to="/training/automotive-sales" style={{ color: 'inherit' }}>National Sales Systems</Link>
                 </div>
             </div>
             <style>{`

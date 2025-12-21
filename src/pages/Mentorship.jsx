@@ -54,21 +54,30 @@ const Mentorship = () => {
                             animate={{ opacity: 1 }}
                             style={{ color: 'var(--color-accent)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem', display: 'block' }}
                         >
-                            Elite Performance Training
+                            Sales Growth. Accountability. Momentum.
                         </motion.span>
                         <motion.h1
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            style={{ fontSize: '4rem', marginBottom: '2rem' }}
+                            style={{ fontSize: '3.5rem', marginBottom: '2rem', lineHeight: '1.2' }}
                         >
-                            Master Your Sales Craft <br /> for Just <span className="text-gradient-gold">$27/Month</span>
+                            Free 30-Day <br /> Salesperson Mentorship
                         </motion.h1>
                         <p style={{ fontSize: '1.2rem', marginBottom: '3rem', opacity: 0.9 }}>
-                            The Salesperson Mentorship Program is designed for high-achievers who want to dominate the automotive market while maintaining their core values.
+                            Weekly coaching, real accountability, and a proven system to close more deals.
                         </p>
-                        <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-                            <a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer" className="btn-primary">Enroll Now</a>
-                            <a href="#details" className="btn-secondary" style={{ color: 'white', borderColor: 'white' }}>Learn More</a>
+
+                        <div style={{ backgroundColor: 'rgba(255,255,255,0.05)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', maxWidth: '500px', margin: '0 auto 3rem' }}>
+                            <div style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>First 30 Days FREE</div>
+                            <div style={{ opacity: 0.8, marginBottom: '1.5rem' }}>Then only $27/month per salesperson. Cancel anytime.</div>
+                            <a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ width: '100%', display: 'block' }}>Start My Free 30 Days</a>
+                            <div style={{ fontSize: '0.8rem', opacity: 0.6, marginTop: '1rem' }}>No contracts. Limited spots.</div>
+                        </div>
+
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', opacity: 0.8, fontSize: '0.9rem' }}>
+                            <span>✓ 25+ Years Experience</span>
+                            <span>✓ Results, Not Theory</span>
+                            <span>✓ Built for Busy Reps</span>
                         </div>
                     </div>
                 </div>
@@ -83,63 +92,66 @@ const Mentorship = () => {
 
             <section id="details" className="mentorship-details" style={{ padding: '100px 0' }}>
                 <div className="container">
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center' }}>
-                        <div style={{ flex: '1 1 400px' }}>
-                            <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '2rem' }}>Why Join the Mentorship?</h2>
-                            <p style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
-                                Being a salesperson can be isolating. Most training is outdated or focuses purely on "closing the deal" at any cost. We do things differently. Our <Link to="/academy" style={{ color: 'var(--color-accent)', fontWeight: 600 }}>Training Academy</Link> provides the technical foundation, while this mentorship provides the personal growth.
-                            </p>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-                                {benefits.map((benefit, index) => (
-                                    <motion.div
-                                        key={benefit}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: index * 0.1 }}
-                                        style={{ display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}
-                                    >
-                                        <CheckCircle size={20} style={{ color: 'var(--color-accent)', flexShrink: 0 }} />
-                                        <span style={{ fontWeight: 500 }}>{benefit}</span>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-                        <div style={{ flex: '1 1 400px' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2 className="section-title">What You Get Every Month</h2>
+                        <p style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.1rem', opacity: 0.8 }}>
+                            A compact sales training system that improves skill, structure, and consistency.
+                        </p>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                        {[
+                            { title: "Weekly Micro-Coaching", desc: "5–10 minutes every Monday. Topics: first impressions, trust, qualifying, presenting, follow‑up." },
+                            { title: "LIVE 27‑Minute Zoom", desc: "Fast, focused coaching with Joe Cala once a month. Real Q&A. No fluff." },
+                            { title: "Weekly Accountability", desc: "Simple weekly actions and a monthly reflection to lock in progress." },
+                            { title: "Private Community", desc: "Ask questions, share wins, and get feedback from Joe and peers." },
+                            { title: "Sales Resource Vault", desc: "Scripts, value sheets, quick guides, and PDFs. New resources monthly." },
+                            { title: "Optional AI Sales Coach", desc: "Personalized tips from your CRM activity. Coming soon. +$17/month." }
+                        ].map((item, index) => (
                             <motion.div
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.6 }}
-                                className="glass-dark"
-                                style={{ padding: '3rem', borderRadius: '15px', color: 'white', position: 'relative' }}
+                                transition={{ delay: index * 0.1 }}
+                                style={{ padding: '2rem', backgroundColor: 'white', border: '1px solid #eee', borderRadius: '12px' }}
                             >
-                                <div style={{ position: 'absolute', top: '-15px', right: '-15px', width: '80px', height: '80px', backgroundColor: 'var(--color-accent)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 700, fontSize: '0.9rem', textAlign: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.2)' }}>
-                                    ONLY <br /> $27
-                                </div>
-                                <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Monthly Subscription</h3>
-                                <p style={{ opacity: 0.8, marginBottom: '2rem' }}>
-                                    No long-term contracts. Cancel anytime. We are so confident in the value of this program that we make it accessible to every salesperson ready to upgrade their life.
-                                </p>
-                                <ul style={{ marginBottom: '2.5rem', opacity: 0.9 }}>
-                                    <li style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1rem', marginBottom: '1rem' }}>✓ Weekly Coaching Calls</li>
-                                    <li style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1rem', marginBottom: '1rem' }}>✓ Direct Access to Joe Cala</li>
-                                    <li>✓ Exclusive Resources & Templates</li>
-                                </ul>
-                                <a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ width: '100%', textAlign: 'center', display: 'block' }}>Secure Your Spot <ArrowRight size={18} style={{ marginLeft: '10px' }} /></a>
+                                <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>{item.title}</h3>
+                                <p style={{ opacity: 0.8 }}>{item.desc}</p>
                             </motion.div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            <FAQ items={faqItems} title="Mentorship Questions" />
-
-            <section className="cta-banner" style={{ backgroundColor: 'var(--color-primary)', color: 'white', textAlign: 'center' }}>
+            {/* Video Testimonials Section */}
+            <section style={{ padding: '80px 0', backgroundColor: '#f9fafb' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Ready to Lead With Purpose?</h2>
-                    <p style={{ marginBottom: '2.5rem', opacity: 0.8 }}>Don't wait for success to happen. Build the foundation today.</p>
-                    <a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer" className="btn-primary">Get Started Now</a>
+                    <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '3rem' }}>What Reps Are Saying</h2>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+                        {[...Array(8)].map((_, i) => (
+                            <div key={i} style={{ aspectRatio: '9/16', backgroundColor: '#ddd', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', cursor: 'pointer' }}>
+                                <img src={`https://images.unsplash.com/photo-${1500000000000 + i}?auto=format&fit=crop&q=80&w=400`} alt="Testimonial Thumbnail" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
+                                <div style={{ position: 'absolute', width: '50px', height: '50px', backgroundColor: 'rgba(0,0,0,0.6)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>►</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <FAQ items={[
+                { question: "Who is this for?", answer: "New reps who want structure and coaching. Experienced reps who want consistency. Managers who want low‑cost, high‑impact development." },
+                { question: "How does the free 30 days work?", answer: "Enroll today, get full access for 30 days. After that, it’s $27/month per salesperson unless you cancel." },
+                { question: "What happens in the 27‑minute Zoom mentorship?", answer: "Live coaching with Joe, focused on one core skill each month plus Q&A. You leave with one action to apply immediately." },
+                { question: "Do I need to buy anything else?", answer: "No. Everything is included. The optional AI Sales Coach add‑on will be available soon." },
+                { question: "What industries is this for?", answer: "Retail, automotive, real estate, SaaS, professional services, home services, and more." }
+            ]} title="Frequently Asked Questions" />
+
+            <section className="cta-banner" style={{ backgroundColor: 'var(--color-primary)', color: 'white', textAlign: 'center', padding: '100px 0' }}>
+                <div className="container">
+                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Don’t wait another month to fix your pipeline.</h2>
+                    <p style={{ marginBottom: '2.5rem', opacity: 0.8 }}>Get structure, coaching, and momentum. Free for 30 days.</p>
+                    <a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer" className="btn-primary">Start My Free 30 Days</a>
                 </div>
             </section>
         </motion.div>

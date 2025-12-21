@@ -230,10 +230,25 @@ const Academy = () => {
                                     style={{ backgroundColor: 'white', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 40px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}
                                 >
                                     <div style={{ padding: '2rem', flex: 1 }}>
-                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
-                                            <div style={{ padding: '0.8rem', backgroundColor: 'rgba(26, 27, 65, 0.05)', borderRadius: '12px', color: 'var(--color-primary)' }}>
-                                                {getIconForCategory(course.category)}
+                                        {course.id === 'internet-lead-handling' && (
+                                            <div style={{ marginTop: '1rem', padding: '0.8rem', backgroundColor: '#f0f9ff', borderRadius: '6px', fontSize: '0.9rem', borderLeft: '3px solid var(--color-accent)' }}>
+                                                <span style={{ fontWeight: 600, display: 'block', marginBottom: '0.3rem', color: '#0c4a6e' }}>💡 Related Insight:</span>
+                                                <Link to="/blog/frayze-growth-engine-vs-crm" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>
+                                                    Read about the "Speed-to-Lead" Growth Engine
+                                                </Link>
                                             </div>
+                                        )}
+                                        {course.id === 'developing-high-performance-teams' && (
+                                            <div style={{ marginTop: '1rem', padding: '0.8rem', backgroundColor: '#f0f9ff', borderRadius: '6px', fontSize: '0.9rem', borderLeft: '3px solid var(--color-accent)' }}>
+                                                <span style={{ fontWeight: 600, display: 'block', marginBottom: '0.3rem', color: '#0c4a6e' }}>💡 Leadership Focus:</span>
+                                                <Link to="/blog/high-turnover-dealership-culture-fix" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>
+                                                    Why High Turnover is destroying your store
+                                                </Link>
+                                            </div>
+                                        )}
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>                                        <div style={{ padding: '0.8rem', backgroundColor: 'rgba(26, 27, 65, 0.05)', borderRadius: '12px', color: 'var(--color-primary)' }}>
+                                            {getIconForCategory(course.category)}
+                                        </div>
                                             <span style={{ fontSize: '0.85rem', fontWeight: 600, padding: '0.4rem 0.8rem', backgroundColor: course.price === 'Free' ? '#e6f4ea' : '#fff8e1', color: course.price === 'Free' ? '#1e7e34' : '#b28900', borderRadius: '8px' }}>
                                                 {course.price}
                                             </span>

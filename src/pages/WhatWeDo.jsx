@@ -111,6 +111,38 @@ const WhatWeDo = () => {
                 </div>
             </section>
 
+            <section className="tech-ecosystem" style={{ padding: '100px 0', backgroundColor: '#f5f7fa', borderTop: '1px solid #eee' }}>
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2 className="section-title">Integrated Technology Ecosystem</h2>
+                        <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', opacity: 0.8 }}>
+                            The Joe Cala System isn't just theory—it powers the most advanced sales tools in the industry. We partner with best-in-class platforms to ensure your technology drives your process.
+                        </p>
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                        {/* Frayze Card */}
+                        <div style={{ backgroundColor: 'white', padding: '2.5rem', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#0F102A' }}>Frayze.ca</h3>
+                            <div style={{ color: 'var(--color-accent)', fontWeight: 'bold', marginBottom: '1rem', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '1px' }}>The Growth Engine</div>
+                            <p style={{ marginBottom: '1.5rem', opacity: 0.8 }}>
+                                The "No Lead Left Behind" communication layer. Unifies SMS, Social, and Email into one inbox with <strong style={{ color: 'var(--color-primary)' }}>Missed Call Text Back</strong> automation.
+                            </p>
+                            <a href="https://frayze.ca" target="_blank" rel="noopener noreferrer" style={{ marginTop: 'auto', textDecoration: 'none', color: 'var(--color-primary)', fontWeight: 600 }}>Explore Frayze &rarr;</a>
+                        </div>
+
+                        {/* AutoCorp Card */}
+                        <div style={{ backgroundColor: 'white', padding: '2.5rem', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#0F102A' }}>AutoCorp.ai</h3>
+                            <div style={{ color: 'var(--color-accent)', fontWeight: 'bold', marginBottom: '1rem', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '1px' }}>Secure Trade & Credit</div>
+                            <p style={{ marginBottom: '1.5rem', opacity: 0.8 }}>
+                                Real-time credit decisions and trade valuations that integrate seamlessly with your sales flow, reducing fraud and speeding up the deal.
+                            </p>
+                            <a href="https://autocorp.ai" target="_blank" rel="noopener noreferrer" style={{ marginTop: 'auto', textDecoration: 'none', color: 'var(--color-primary)', fontWeight: 600 }}>Visit AutoCorp &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section className="sales-process" style={{ padding: '120px 0', backgroundColor: 'white' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
