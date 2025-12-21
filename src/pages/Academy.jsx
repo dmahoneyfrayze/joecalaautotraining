@@ -151,7 +151,7 @@ const Academy = () => {
                         >
                             <div className="glass-light" style={{ padding: '3rem', borderRadius: '24px', border: '1px solid #f0f0f0', boxShadow: '0 20px 60px rgba(0,0,0,0.05)', position: 'relative', overflow: 'hidden' }}>
                                 <img
-                                    src="/src/assets/images/group-training.jpg"
+                                    src="/images/group-training.jpg"
                                     alt="Joe Cala Group Training Session"
                                     style={{ width: '100%', borderRadius: '15px', marginBottom: '2rem' }}
                                 />
@@ -215,7 +215,7 @@ const Academy = () => {
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center' }}>
                         <div style={{ flex: '1 1 450px', order: 2 }}>
                             <img
-                                src="/src/assets/images/speaking.jpg"
+                                src="/images/speaking.jpg"
                                 alt="Joe Cala Public Speaking"
                                 style={{ width: '100%', borderRadius: '24px', boxShadow: 'var(--shadow-premium)' }}
                             />

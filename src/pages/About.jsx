@@ -41,7 +41,7 @@ const About = () => {
                         <div style={{ flex: '1 1 400px', position: 'relative' }}>
                             <div style={{ width: '100%', borderRadius: '15px', overflow: 'hidden', position: 'relative' }}>
                                 <img
-                                    src="/src/assets/images/joe-portrait-2.jpg"
+                                    src="/images/joe-portrait-2.jpg"
                                     alt="Joe Cala Professional Portrait"
                                     style={{ width: '100%', height: 'auto', display: 'block' }}
                                 />

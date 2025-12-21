@@ -116,7 +116,7 @@ const Header = () => {
 
       <div className="container nav-container">
         <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/src/assets/images/logo.png" alt="Joe Cala Logo" style={{ height: '50px', width: 'auto' }} />
+          <img src="/images/logo.png" alt="Joe Cala Logo" style={{ height: '50px', width: 'auto' }} />
         </Link>
 
         <ul className="nav-links">

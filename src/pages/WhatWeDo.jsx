@@ -102,7 +102,7 @@ const WhatWeDo = () => {
                         </div>
                         <div style={{ flex: '1 1 400px', display: 'flex', justifyContent: 'center' }}>
                             <img
-                                src="/src/assets/images/growth-circle.jpg"
+                                src="/images/growth-circle.jpg"
                                 alt="JC Growth Circle Diagram"
                                 style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '20px', boxShadow: 'var(--shadow-premium)' }}
                             />
@@ -121,7 +121,7 @@ const WhatWeDo = () => {
                     </div>
                     <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
                         <img
-                            src="/src/assets/images/sales-process.png"
+                            src="/images/sales-process.png"
                             alt="Automotive Sales Operating System"
                             style={{ width: '100%', height: 'auto', borderRadius: '15px', boxShadow: '0 20px 50px rgba(0,0,0,0.05)' }}
                         />

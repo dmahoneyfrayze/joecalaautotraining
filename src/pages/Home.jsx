@@ -74,7 +74,7 @@ const Home = () => {
                         style={{ flex: '0 1 450px', position: 'relative' }}
                     >
                         <img
-                            src="/src/assets/images/joe-portrait-1.jpg"
+                            src="/images/joe-portrait-1.jpg"
                             alt="Joe Cala"
                             style={{ width: '100%', borderRadius: '24px', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}
                         />
