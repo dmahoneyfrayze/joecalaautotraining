@@ -78,6 +78,7 @@ const Home = () => {
                             alt="Joe Cala - High Ticket Sales Trainer"
                             width="450"
                             height="560"
+                            fetchpriority="high"
                             style={{ width: '100%', height: 'auto', borderRadius: '24px', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}
                         />
                         <div className="glass" style={{ position: 'absolute', bottom: '30px', left: '-30px', padding: '1.5rem', borderRadius: '12px', fontWeight: 700, boxShadow: 'var(--shadow-premium)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>

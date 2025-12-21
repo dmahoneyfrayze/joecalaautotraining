@@ -7,6 +7,8 @@
   --color-accent: #D4AF37;
   /* gold/Brass */
   --color-accent-hover: #B8962F;
+  --color-accent-dark: #9F8226;
+  /* Darker gold for text contrast */
   --color-text-dark: #2D2D2D;
   --color-text-light: #FDFCF0;
   --color-bg-light: #FDFCF0;
@@ -140,7 +142,8 @@ button {
 .btn-secondary {
   padding: 0.8rem 1.8rem;
   border: 2px solid var(--color-accent);
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
+  /* Improved contrast */
   border-radius: 4px;
   font-weight: 600;
   transition: var(--transition-smooth);
