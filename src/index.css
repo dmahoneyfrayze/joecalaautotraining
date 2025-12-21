@@ -31,18 +31,13 @@
   box-sizing: border-box;
 }
 
-html {
-  scrollbar-gutter: stable;
-}
-
 body {
   font-family: var(--font-sans);
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   line-height: 1.6;
   overflow-x: hidden;
-  min-height: 100.1vh;
-  /* Force scrollbar presence without hijacking scroll container */
+  min-height: 100vh;
   position: relative;
 }
 
