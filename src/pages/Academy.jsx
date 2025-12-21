@@ -1,11 +1,21 @@
-import { motion } from 'framer-motion';
-import { BookOpen, Award, Globe, CheckCircle, ArrowRight, Zap, Target, Users } from 'lucide-react';
+import { useState } from 'react'; // Add useState import
+import { motion, AnimatePresence } from 'framer-motion';
+import { BookOpen, Award, Globe, CheckCircle, ArrowRight, Zap, Target, Users, Book, Download, LayoutGrid, Wrench, Bike, Home, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/Breadcrumbs';
 import FAQ from '../components/FAQ';
+import { courses } from '../data/courses';
 
 const Academy = () => {
+    const [selectedCategory, setSelectedCategory] = useState("All");
+
+    const categories = ["All", "Career Pathways", "Skill Mastery", "Powersports", "Fixed Operations", "Real Estate", "Faith & Community", "Leadership & Ministry", "Bundles & Special Programs", "Free Resources"];
+
+    const filteredCourses = selectedCategory === "All"
+        ? courses
+        : courses.filter(c => c.category === selectedCategory);
+
     const faqItems = [
         {
             question: "What industries do you specialize in?",
@@ -21,23 +31,19 @@ const Academy = () => {
         }
     ];
 
-    const trainingModules = [
-        {
-            title: "Automotive Mastery",
-            description: "Advanced closing techniques, objection handling, and inventory management for the modern North American market.",
-            icon: <Zap size={24} />
-        },
-        {
-            title: "General Sales Training",
-            description: "Universal sales principles applicable to B2B, B2C, and high-ticket service industries across any sector.",
-            icon: <Target size={24} />
-        },
-        {
-            title: "Leadership & Culture",
-            description: "Building high-performance teams that lead with integrity and achieve consistent month-over-month growth.",
-            icon: <Users size={24} />
+    const getIconForCategory = (cat) => {
+        switch (cat) {
+            case "Career Pathways": return <Target size={20} />;
+            case "Real Estate": return <Home size={20} />;
+            case "Faith & Community": return <Heart size={20} />;
+            case "Leadership & Ministry": return <Users size={20} />;
+            case "Powersports": return <Bike size={20} />;
+            case "Fixed Operations": return <Wrench size={20} />;
+            case "Bundles & Special Programs": return <LayoutGrid size={20} />;
+            case "Free Resources": return <Download size={20} />;
+            default: return <BookOpen size={20} />;
         }
-    ];
+    };
 
     return (
         <motion.div
@@ -84,7 +90,7 @@ const Academy = () => {
                             transition={{ delay: 0.3 }}
                             style={{ fontSize: '1.25rem', marginBottom: '3rem', opacity: 0.9, lineHeight: 1.6 }}
                         >
-                            The Gold Standard for North American Sales & Leadership Training. Rooted in elite automotive history, built for modern professional dominance.
+                            The Gold Standard for North American Sales & Leadership Training. Over 30+ specialized courses and thousands of lessons to master your craft.
                         </motion.p>
 
                         <motion.div
@@ -93,7 +99,7 @@ const Academy = () => {
                             transition={{ delay: 0.4 }}
                         >
                             <a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem', padding: '1.2rem 2.5rem' }}>
-                                Access Training Portal <ArrowRight size={20} />
+                                Access All Courses <ArrowRight size={20} />
                             </a>
                         </motion.div>
                     </div>
@@ -180,35 +186,79 @@ const Academy = () => {
                 </div>
             </section>
 
-            {/* Modules Grid */}
-            < section style={{ padding: '120px 0', backgroundColor: '#fcfcfc' }}>
+            {/* Course Catalog Grid */}
+            <section style={{ padding: '100px 0', backgroundColor: '#fcfcfc' }}>
                 <div className="container">
-                    <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 5rem' }}>
-                        <h2 className="section-title">Beyond Just Automotive</h2>
-                        <p style={{ fontSize: '1.1rem', opacity: 0.8 }}>Our curriculum is built on the foundation of high-ticket sales, applicable to any industry that requires influence, integrity, and elite communication.</p>
+                    <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem' }}>
+                        <h2 className="section-title">Comprehensive Curriculum</h2>
+                        <p style={{ fontSize: '1.1rem', opacity: 0.8 }}>Explore our extensive catalog of courses designed for every stage of your career.</p>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.5rem' }}>
-                        {trainingModules.map((module, i) => (
-                            <motion.div
-                                key={i}
-                                whileHover={{ y: -10 }}
-                                style={{ padding: '3rem', backgroundColor: 'white', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0,0,0,0.03)', position: 'relative' }}
+                    {/* Filter Buttons */}
+                    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '4rem' }}>
+                        {categories.map(cat => (
+                            <button
+                                key={cat}
+                                onClick={() => setSelectedCategory(cat)}
+                                style={{
+                                    padding: '0.8rem 1.5rem',
+                                    borderRadius: '50px',
+                                    border: 'none',
+                                    backgroundColor: selectedCategory === cat ? 'var(--color-primary)' : 'white',
+                                    color: selectedCategory === cat ? 'white' : '#555',
+                                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                                    cursor: 'pointer',
+                                    fontWeight: 600,
+                                    transition: 'all 0.3s ease',
+                                    fontSize: '0.9rem'
+                                }}
                             >
-                                <div style={{ width: '60px', height: '60px', backgroundColor: 'var(--color-primary)', color: 'white', borderRadius: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem' }}>
-                                    {module.icon}
-                                </div>
-                                <h3 style={{ marginBottom: '1.2rem' }}>{module.title}</h3>
-                                <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{module.description}</p>
-                            </motion.div>
+                                {cat}
+                            </button>
                         ))}
                     </div>
-                    <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+
+                    <motion.div layout style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+                        <AnimatePresence>
+                            {filteredCourses.map((course) => (
+                                <motion.div
+                                    layout
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.9 }}
+                                    key={course.id}
+                                    style={{ backgroundColor: 'white', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 40px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}
+                                >
+                                    <div style={{ padding: '2rem', flex: 1 }}>
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
+                                            <div style={{ padding: '0.8rem', backgroundColor: 'rgba(26, 27, 65, 0.05)', borderRadius: '12px', color: 'var(--color-primary)' }}>
+                                                {getIconForCategory(course.category)}
+                                            </div>
+                                            <span style={{ fontSize: '0.85rem', fontWeight: 600, padding: '0.4rem 0.8rem', backgroundColor: course.price === 'Free' ? '#e6f4ea' : '#fff8e1', color: course.price === 'Free' ? '#1e7e34' : '#b28900', borderRadius: '8px' }}>
+                                                {course.price}
+                                            </span>
+                                        </div>
+                                        <p style={{ fontSize: '0.85rem', color: 'var(--color-accent)', fontWeight: 600, textTransform: 'uppercase', marginBottom: '0.5rem', letterSpacing: '0.5px' }}>{course.lessons}</p>
+                                        <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', lineHeight: 1.3 }}>{course.title}</h3>
+                                        <p style={{ fontSize: '0.95rem', color: '#666', lineHeight: 1.6 }}>{course.description}</p>
+                                    </div>
+                                    <div style={{ padding: '1.5rem 2rem', borderTop: '1px solid #f0f0f0', backgroundColor: '#fafafa' }}>
+                                        <a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.95rem' }}>
+                                            View Course Details <ArrowRight size={16} />
+                                        </a>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </motion.div>
+
+                    {/* CTA */}
+                    <div style={{ textAlign: 'center', marginTop: '5rem' }}>
                         <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>Looking for direct one-on-one guidance?</p>
                         <Link to="/mentorship" className="btn-primary">Explore Mentorship Programs</Link>
                     </div>
                 </div>
-            </section >
+            </section>
 
             <section className="speaking" style={{ padding: '120px 0', backgroundColor: 'white' }}>
                 <div className="container">
