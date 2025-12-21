@@ -32,7 +32,9 @@
 }
 
 html {
-  scrollbar-gutter: stable;
+  overflow: hidden;
+  /* Prevent native window scroll to stop script thrashing */
+  height: 100%;
 }
 
 body {
@@ -40,9 +42,20 @@ body {
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   line-height: 1.6;
-  min-height: 100vh;
-  overflow-x: hidden;
+  height: 100%;
+  overflow: hidden;
+  /* Lock body */
   position: relative;
+}
+
+#root {
+  height: 100%;
+  overflow-y: auto;
+  /* Move scrollbar here - The App Shell Pattern */
+  overflow-x: hidden;
+  display: flex;
+  /* Keep flex for layout if needed, or block */
+  flex-direction: column;
 }
 
 h1,
