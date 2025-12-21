@@ -58,8 +58,10 @@ body {
   display: flex;
   /* Keep flex for layout if needed, or block */
   flex-direction: column;
-  scrollbar-gutter: stable;
-  /* Stabilize internal layout width */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
 }
 
 h1,
@@ -189,7 +191,7 @@ section {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
