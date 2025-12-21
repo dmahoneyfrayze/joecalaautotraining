@@ -21,6 +21,7 @@ const BlogPost = lazy(() => import('./pages/BlogPost'));
 import Toronto from './pages/locations/Toronto';
 import MyrtleBeach from './pages/locations/MyrtleBeach';
 import SalesTraining from './pages/pillars/SalesTraining';
+import Corporate from './pages/Corporate';
 import Terms from './pages/Terms';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/what-we-do" element={<WhatWeDo />} />
+            <Route path="/corporate" element={<Corporate />} />
             <Route path="/academy" element={<Academy />} />
             <Route path="/mentorship" element={<Mentorship />} />
             <Route path="/contact" element={<Contact />} />

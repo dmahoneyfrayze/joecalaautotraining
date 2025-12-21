@@ -93,6 +93,73 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Choose Your Path Section */}
+            <section style={{ padding: '40px 0 80px', marginTop: '-60px', position: 'relative', zIndex: 10 }}>
+                <div className="container">
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                        {/* Individuals Card */}
+                        <FadeIn delay={0.2}>
+                            <Link to="/mentorship" style={{ textDecoration: 'none' }}>
+                                <div style={{
+                                    backgroundColor: 'white',
+                                    padding: '3rem',
+                                    borderRadius: '20px',
+                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                    border: '1px solid rgba(0,0,0,0.05)',
+                                    height: '100%',
+                                    transition: 'transform 0.3s ease',
+                                    textAlign: 'center'
+                                }}
+                                    onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
+                                    onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                                >
+                                    <div style={{ width: '60px', height: '60px', margin: '0 auto 1.5rem', backgroundColor: 'var(--color-primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
+                                        <Briefcase size={28} />
+                                    </div>
+                                    <h3 style={{ fontSize: '1.8rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>For Individuals</h3>
+                                    <p style={{ opacity: 0.7, marginBottom: '1.5rem', color: 'var(--color-text)' }}>
+                                        Salespeople, Managers, and Leaders looking to master their craft and accelerate their career.
+                                    </p>
+                                    <span style={{ color: 'var(--color-accent)', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                                        Join Mentorship <ArrowRight size={18} />
+                                    </span>
+                                </div>
+                            </Link>
+                        </FadeIn>
+
+                        {/* Groups Card */}
+                        <FadeIn delay={0.4}>
+                            <Link to="/corporate" style={{ textDecoration: 'none' }}>
+                                <div style={{
+                                    backgroundColor: 'var(--color-primary)',
+                                    padding: '3rem',
+                                    borderRadius: '20px',
+                                    boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
+                                    color: 'white',
+                                    height: '100%',
+                                    transition: 'transform 0.3s ease',
+                                    textAlign: 'center'
+                                }}
+                                    onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
+                                    onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                                >
+                                    <div style={{ width: '60px', height: '60px', margin: '0 auto 1.5rem', backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-accent)' }}>
+                                        <Users size={28} />
+                                    </div>
+                                    <h3 style={{ fontSize: '1.8rem', color: 'white', marginBottom: '1rem' }}>For Dealerships</h3>
+                                    <p style={{ opacity: 0.8, marginBottom: '1.5rem', color: 'rgba(255,255,255,0.8)' }}>
+                                        Dealer Principals and Groups seeking scalable training systems and culture transformation.
+                                    </p>
+                                    <span style={{ color: 'var(--color-accent)', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                                        Corporate Solutions <ArrowRight size={18} />
+                                    </span>
+                                </div>
+                            </Link>
+                        </FadeIn>
+                    </div>
+                </div>
+            </section>
+
             {/* Stats Section */}
             <section className="stats" style={{ padding: '80px 0', borderBottom: '1px solid #f0f0f0', position: 'relative' }}>
                 <FadeIn className="container">
