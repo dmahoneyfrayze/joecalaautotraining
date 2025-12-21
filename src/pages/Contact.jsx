@@ -37,7 +37,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ marginBottom: '0.2rem' }}>Call Us</h4>
-                                        <p style={{ opacity: 0.7 }}>Myrtle Beach, SC</p>
+                                        <p style={{ opacity: 0.7 }}>+1 848-248-0730</p>
                                     </div>
                                 </div>
                                 <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
@@ -45,8 +45,9 @@ const Contact = () => {
                                         <MapPin size={24} />
                                     </div>
                                     <div>
-                                        <h4 style={{ marginBottom: '0.2rem' }}>Location</h4>
-                                        <p style={{ opacity: 0.7 }}>Serving Nationwide</p>
+                                        <h4 style={{ marginBottom: '0.2rem' }}>Locations</h4>
+                                        <p style={{ opacity: 0.7, marginBottom: '0.2rem' }}><strong>Myrtle Beach, SC</strong> (HQ)</p>
+                                        <p style={{ opacity: 0.7 }}>Toronto, ON (Canada Office)</p>
                                     </div>
                                 </div>
                             </div>

@@ -64,22 +64,40 @@ const SEO = ({ title, description, keywords, canonical }) => {
 
         const defaultSchema = {
             "@context": "https://schema.org",
-            "@type": "ProfessionalService",
+            "@type": "Consultant",
             "name": "Joe Cala - JC Training & Development",
-            "image": "https://josephacala.com/logo.png",
-            "@id": "",
+            "image": "https://josephacala.com/images/logo.png",
+            "@id": "https://josephacala.com/#organization",
             "url": "https://josephacala.com",
-            "telephone": "",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Toronto",
-                "addressRegion": "ON",
-                "addressCountry": "CA"
+            "telephone": "+1 848-248-0730",
+            "address": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "",
+                    "addressLocality": "Myrtle Beach",
+                    "addressRegion": "SC",
+                    "postalCode": "29577",
+                    "addressCountry": "US"
+                },
+                {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Toronto",
+                    "addressRegion": "ON",
+                    "addressCountry": "CA"
+                }
+            ],
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "33.6891",
+                "longitude": "-78.8867"
             },
             "sameAs": [
                 "https://www.linkedin.com/in/josephacala/",
-                "https://www.facebook.com/josephacala"
-            ]
+                "https://www.facebook.com/josephacala",
+                "https://www.youtube.com/@JosephCala-SalesLeadership",
+                "https://jctrainingacademy.thinkific.com/"
+            ],
+            "priceRange": "$$$"
         };
 
         const jsonLd = {
