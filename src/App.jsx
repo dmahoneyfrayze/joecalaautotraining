@@ -29,31 +29,29 @@ function App() {
 
   return (
     <div className="app">
-      <FadeIn>
-        <ScrollToTop />
-        <Header />
-        <AnimatePresence mode='wait'>
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/what-we-do" element={<WhatWeDo />} />
-            <Route path="/corporate" element={<Corporate />} />
-            <Route path="/academy" element={<Academy />} />
-            <Route path="/mentorship" element={<Mentorship />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            {/* Location & Pillar Pages */}
-            <Route path="/locations/toronto" element={<Toronto />} />
-            <Route path="/locations/myrtle-beach" element={<MyrtleBeach />} />
-            <Route path="/training/automotive-sales" element={<SalesTraining />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-          </Routes>
-        </AnimatePresence>
-        <Footer />
-        <Loading />
-      </FadeIn>
+      <ScrollToTop />
+      <Header />
+      <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/what-we-do" element={<WhatWeDo />} />
+          <Route path="/corporate" element={<Corporate />} />
+          <Route path="/academy" element={<Academy />} />
+          <Route path="/mentorship" element={<Mentorship />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          {/* Location & Pillar Pages */}
+          <Route path="/locations/toronto" element={<Toronto />} />
+          <Route path="/locations/myrtle-beach" element={<MyrtleBeach />} />
+          <Route path="/training/automotive-sales" element={<SalesTraining />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+        </Routes>
+      </AnimatePresence>
+      <Footer />
+      <Loading />
     </div>
   );
 }
