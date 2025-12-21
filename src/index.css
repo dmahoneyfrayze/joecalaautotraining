@@ -32,9 +32,7 @@
 }
 
 html {
-  overflow-y: scroll;
-  /* Force vertical scrollbar always to prevent jump/bounce */
-  overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -42,14 +40,9 @@ body {
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   line-height: 1.6;
-  position: relative;
-}
-
-#root {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   overflow-x: hidden;
+  position: relative;
 }
 
 h1,
