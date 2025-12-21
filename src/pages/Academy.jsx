@@ -51,8 +51,8 @@ const Academy = () => {
                 keywords="sales training academy, car sales portal, dealership training Canada, US auto sales coaching, Thinkific sales course"
             />
             {/* Academy Hero */}
-            <section className="academy-hero" style={{ backgroundColor: '#0A0B1A', color: 'white', padding: '180px 0 100px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '600px', height: '600px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)', zIndex: 0 }}></div>
+            <section className="academy-hero" style={{ backgroundColor: '#0A0B1A', color: 'white', padding: '180px 0 150px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '600px', height: '600px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)', zIndex: 0, filter: 'blur(50px)' }}></div>
 
                 <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <Breadcrumbs />
@@ -75,7 +75,7 @@ const Academy = () => {
                             transition={{ delay: 0.2 }}
                             style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}
                         >
-                            JC Training <span style={{ color: 'var(--color-accent)' }}>Academy</span>
+                            JC Training <span className="text-gradient-gold">Academy</span>
                         </motion.h1>
 
                         <motion.p
@@ -98,13 +98,26 @@ const Academy = () => {
                         </motion.div>
                     </div>
                 </div>
+
+                {/* Wave Separator */}
+                <div className="wave-separator-bottom">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+                    </svg>
+                </div>
             </section>
 
             {/* Authority Section */}
             <section style={{ padding: '100px 0', backgroundColor: 'white' }}>
                 <div className="container">
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5rem', alignItems: 'center' }}>
-                        <div style={{ flex: '1 1 500px' }}>
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            style={{ flex: '1 1 500px' }}
+                        >
                             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                                 <div style={{ width: '50px', height: '2px', backgroundColor: 'var(--color-accent)' }}></div>
                                 <span style={{ fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--color-primary)' }}>Heritage of Excellence</span>
@@ -127,9 +140,15 @@ const Academy = () => {
                                     <p style={{ opacity: 0.7, fontSize: '0.9rem' }}>Elite Students Trained</p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div style={{ flex: '1 1 400px' }}>
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            style={{ flex: '1 1 400px' }}
+                        >
                             <div className="glass-light" style={{ padding: '3rem', borderRadius: '24px', border: '1px solid #f0f0f0', boxShadow: '0 20px 60px rgba(0,0,0,0.05)', position: 'relative', overflow: 'hidden' }}>
                                 <img
                                     src="/src/assets/images/group-training.jpg"
@@ -156,13 +175,13 @@ const Academy = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
 
             {/* Modules Grid */}
-            <section style={{ padding: '120px 0', backgroundColor: '#fcfcfc' }}>
+            < section style={{ padding: '120px 0', backgroundColor: '#fcfcfc' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 5rem' }}>
                         <h2 className="section-title">Beyond Just Automotive</h2>
@@ -189,7 +208,7 @@ const Academy = () => {
                         <Link to="/mentorship" className="btn-primary">Explore Mentorship Programs</Link>
                     </div>
                 </div>
-            </section>
+            </section >
 
             <section className="speaking" style={{ padding: '120px 0', backgroundColor: 'white' }}>
                 <div className="container">
@@ -226,7 +245,7 @@ const Academy = () => {
                     </a>
                 </div>
             </section>
-        </motion.div>
+        </motion.div >
     );
 };
 

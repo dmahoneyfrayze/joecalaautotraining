@@ -15,17 +15,17 @@ const Home = () => {
             className="home"
         >
             <SEO
-                title="Auto Sales Training Canada & US | Dealership Consulting"
-                description="Elevate your dealership's success with Joe Cala. Elite automotive sales training and leadership coaching across North America. Formerly of Auto Dealer University."
-                keywords="auto sales training Canada, US dealership consulting, car sales leadership, Joe Cala training, high ticket sales training"
+                title="The Authority in High-Ticket Sales Training | Joe Cala"
+                description="Elite sales training & leadership coaching for Automotive, Real Estate, Tech, and Luxury Retail. Master the art of influence with Joe Cala."
+                keywords="sales training, high ticket sales, automotive sales training, real estate sales coaching, tech sales training, Joe Cala"
             />
             {/* Hero Section */}
-            <section className="hero" style={{ height: '95vh', display: 'flex', alignItems: 'center', backgroundColor: 'var(--color-primary)', color: 'white', position: 'relative', overflow: 'hidden' }}>
+            <section className="hero" style={{ minHeight: '90vh', display: 'flex', alignItems: 'center', backgroundColor: 'var(--color-primary)', color: 'white', position: 'relative', overflow: 'hidden', paddingBottom: '150px' }}>
                 {/* Background Decorative Elements */}
-                <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '500px', height: '500px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)' }}></div>
-                <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%)' }}></div>
+                <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '600px', height: '600px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)', filter: 'blur(40px)' }}></div>
+                <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '400px', height: '400px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%)', filter: 'blur(40px)' }}></div>
 
-                <div className="container" style={{ zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
+                <div className="container" style={{ zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '4rem' }}>
                     <div style={{ flex: '1 1 500px' }}>
                         <motion.span
                             initial={{ x: -20, opacity: 0 }}
@@ -42,7 +42,7 @@ const Home = () => {
                             style={{ fontSize: 'clamp(3rem, 6vw, 5rem)', marginBottom: '2rem', lineHeight: 1.1 }}
                         >
                             Lead With Purpose. <br />
-                            <span style={{ color: 'var(--color-accent)' }}>Live With Clarity.</span>
+                            <span className="text-gradient-gold">Live With Clarity.</span>
                         </motion.h1>
                         <motion.p
                             initial={{ y: 30, opacity: 0 }}
@@ -61,14 +61,14 @@ const Home = () => {
                             <Link to="/mentorship" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
                                 Start Your Journey <ArrowRight size={20} />
                             </Link>
-                            <Link to="/what-we-do" className="btn-secondary" style={{ color: 'white', borderColor: 'white' }}>
+                            <Link to="/what-we-do" className="btn-secondary" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
                                 Our Approach
                             </Link>
                         </motion.div>
                     </div>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
+                        initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
                         style={{ flex: '0 1 450px', position: 'relative' }}
@@ -76,65 +76,78 @@ const Home = () => {
                         <img
                             src="/src/assets/images/joe-portrait-1.jpg"
                             alt="Joe Cala"
-                            style={{ width: '100%', borderRadius: '30px', boxShadow: 'var(--shadow-premium)' }}
+                            style={{ width: '100%', borderRadius: '24px', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}
                         />
-                        <div style={{ position: 'absolute', bottom: '20px', left: '-20px', padding: '1.5rem', backgroundColor: 'var(--color-accent)', color: 'white', borderRadius: '12px', fontWeight: 700, boxShadow: 'var(--shadow-premium)' }}>
-                            25+ Years Experience
+                        <div className="glass" style={{ position: 'absolute', bottom: '30px', left: '-30px', padding: '1.5rem', borderRadius: '12px', fontWeight: 700, boxShadow: 'var(--shadow-premium)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>
+                            <div style={{ color: 'var(--color-accent)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.2rem' }}>Trusted Authority</div>
+                            <div style={{ fontSize: '1.5rem' }}>25+ Years Experience</div>
                         </div>
                     </motion.div>
+                </div>
+
+                {/* Wave Separator */}
+                <div className="wave-separator-bottom">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+                    </svg>
                 </div>
             </section>
 
             {/* Stats Section */}
-            <section className="stats" style={{ padding: '80px 0', borderBottom: '1px solid #f0f0f0' }}>
+            <section className="stats" style={{ padding: '80px 0', borderBottom: '1px solid #f0f0f0', position: 'relative' }}>
                 <FadeIn className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', textAlign: 'center' }}>
-                        <div className="stat-item">
-                            <h2 style={{ fontSize: '3.5rem', color: 'var(--color-primary)', fontWeight: 700 }}>1,000+</h2>
-                            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600, opacity: 0.6 }}>Students Trained</p>
-                        </div>
-                        <div className="stat-item">
-                            <h2 style={{ fontSize: '3.5rem', color: 'var(--color-primary)', fontWeight: 700 }}>500+</h2>
-                            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600, opacity: 0.6 }}>Dealerships Impacted</p>
-                        </div>
-                        <div className="stat-item">
-                            <h2 style={{ fontSize: '3.5rem', color: 'var(--color-primary)', fontWeight: 700 }}>15+</h2>
-                            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600, opacity: 0.6 }}>Years Experience</p>
-                        </div>
-                        <div className="stat-item">
-                            <h2 style={{ fontSize: '3.5rem', color: 'var(--color-primary)', fontWeight: 700 }}>100%</h2>
-                            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600, opacity: 0.6 }}>Commitment</p>
-                        </div>
+                        {[
+                            { value: "1,000+", label: "Students Trained" },
+                            { value: "500+", label: "Dealerships Impacted" },
+                            { value: "15+", label: "Years Experience" },
+                            { value: "100%", label: "Commitment" }
+                        ].map((stat, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1, duration: 0.6 }}
+                                className="stat-item"
+                            >
+                                <h2 className="text-gradient-gold" style={{ fontSize: '3.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>{stat.value}</h2>
+                                <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600, opacity: 0.6, fontSize: '0.9rem' }}>{stat.label}</p>
+                            </motion.div>
+                        ))}
                     </div>
                 </FadeIn>
             </section>
 
             {/* Pillars Preview */}
-            <section className="pillars-preview" style={{ backgroundColor: '#fcfcfc' }}>
+            <section className="pillars-preview" style={{ backgroundColor: '#fcfcfc', padding: '120px 0' }}>
                 <div className="container">
                     <FadeIn style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 5rem' }}>
                         <h2 className="section-title">A Foundation for Excellence</h2>
-                        <p style={{ fontSize: '1.1rem', opacity: 0.8 }}>We believe that professional mastery and personal integrity go hand-in-hand. Our training is built on four core pillars that ensure long-term success.</p>
+                        <p style={{ fontSize: '1.2rem', opacity: 0.8, lineHeight: 1.8 }}>We believe that professional mastery and personal integrity go hand-in-hand. Our training is built on four core pillars that ensure long-term success.</p>
                     </FadeIn>
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                         {[
-                            { title: 'Faith', icon: <Heart size={30} />, text: 'Rooted in purpose and spiritual integrity.' },
-                            { title: 'Motivation', icon: <Users size={30} />, text: 'The fuel that drives consistent high performance.' },
-                            { title: 'Training', icon: <Briefcase size={30} />, text: 'World-class tactics for the modern market.', link: '/academy' },
-                            { title: 'Coaching', icon: <Star size={30} />, text: 'Direct mentorship to unlock your full potential.', link: '/mentorship' }
+                            { title: 'Faith', icon: <Heart size={32} />, text: 'Rooted in purpose and spiritual integrity.' },
+                            { title: 'Motivation', icon: <Users size={32} />, text: 'The fuel that drives consistent high performance.' },
+                            { title: 'Training', icon: <Briefcase size={32} />, text: 'World-class tactics for the modern market.', link: '/academy' },
+                            { title: 'Coaching', icon: <Star size={32} />, text: 'Direct mentorship to unlock your full potential.', link: '/mentorship' }
                         ].map((pillar, i) => (
                             <Link key={pillar.title} to={pillar.link || '#'}>
-                                <FadeIn delay={i * 0.1}>
-                                    <motion.div
-                                        whileHover={{ y: -10 }}
-                                        style={{ padding: '3rem', backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 10px 40px rgba(0,0,0,0.03)', textAlign: 'center', height: '100%', cursor: pillar.link ? 'pointer' : 'default' }}
-                                    >
-                                        <div style={{ color: 'var(--color-accent)', marginBottom: '1.5rem' }}>{pillar.icon}</div>
-                                        <h3 style={{ marginBottom: '1rem', color: 'var(--color-primary)' }}>{pillar.title}</h3>
-                                        <p style={{ opacity: 0.7, color: 'var(--color-text)' }}>{pillar.text}</p>
-                                    </motion.div>
-                                </FadeIn>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1 }}
+                                    whileHover={{ y: -10 }}
+                                    className="card-premium"
+                                    style={{ padding: '3rem', borderRadius: '16px', textAlign: 'center', height: '100%', cursor: pillar.link ? 'pointer' : 'default', backgroundColor: 'white' }}
+                                >
+                                    <div style={{ color: 'var(--color-accent)', marginBottom: '1.5rem', display: 'inline-flex', padding: '1rem', borderRadius: '50%', backgroundColor: 'rgba(212, 175, 55, 0.1)' }}>{pillar.icon}</div>
+                                    <h3 style={{ marginBottom: '1rem', color: 'var(--color-primary)', fontSize: '1.5rem' }}>{pillar.title}</h3>
+                                    <p style={{ opacity: 0.7, color: 'var(--color-text)', lineHeight: 1.6 }}>{pillar.text}</p>
+                                </motion.div>
                             </Link>
                         ))}
                     </div>
@@ -149,7 +162,7 @@ const Home = () => {
                             <span style={{ color: 'var(--color-accent)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '1.5rem' }}>Exclusive Program</span>
                             <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Salesperson Mentorship</h2>
                             <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', opacity: 0.9 }}>
-                                Join an elite community of automotive sales professionals. Get direct access to training that has generated millions in revenue for dealerships nationwide.
+                                Join an elite community of high-ticket sales professionals. Get direct access to training that has generated millions in revenue across multiple industries.
                             </p>
                             <ul style={{ marginBottom: '3rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                                 <li style={{ display: 'flex', gap: '0.8rem' }}><span style={{ color: 'var(--color-accent)' }}>✓</span> Weekly Live Coaching Calls</li>

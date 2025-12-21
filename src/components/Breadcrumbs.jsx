@@ -8,32 +8,45 @@ const Breadcrumbs = () => {
     if (pathnames.length === 0) return null;
 
     return (
-        <nav aria-label="Breadcrumb" className="breadcrumbs" style={{ padding: '1rem 0', marginBottom: '2rem' }}>
-            <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', opacity: 0.7 }}>
-                <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: 'inherit' }}>
-                    <Home size={14} />
-                    <span>Home</span>
-                </Link>
+        <nav aria-label="Breadcrumb" className="breadcrumbs" style={{ padding: '2rem 0 1rem' }}>
+            <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+                <div style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.6rem',
+                    fontSize: '0.9rem',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    backdropFilter: 'blur(10px)',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '50px',
+                    border: '1px solid rgba(255, 255, 255, 0.15)',
+                    color: 'white'
+                }}>
+                    <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'rgba(255, 255, 255, 0.8)', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = 'white'} onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}>
+                        <Home size={16} />
+                        <span>Home</span>
+                    </Link>
 
-                {pathnames.map((value, index) => {
-                    const last = index === pathnames.length - 1;
-                    const to = `/${pathnames.slice(0, index + 1).join('/')}`;
+                    {pathnames.map((value, index) => {
+                        const last = index === pathnames.length - 1;
+                        const to = `/${pathnames.slice(0, index + 1).join('/')}`;
 
-                    return (
-                        <div key={to} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <ChevronRight size={14} />
-                            {last ? (
-                                <span style={{ fontWeight: 600, color: 'var(--color-accent)', textTransform: 'capitalize' }}>
-                                    {value.replace(/-/g, ' ')}
-                                </span>
-                            ) : (
-                                <Link to={to} style={{ color: 'inherit', textTransform: 'capitalize' }}>
-                                    {value.replace(/-/g, ' ')}
-                                </Link>
-                            )}
-                        </div>
-                    );
-                })}
+                        return (
+                            <div key={to} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                                <ChevronRight size={14} style={{ opacity: 0.5 }} />
+                                {last ? (
+                                    <span style={{ fontWeight: 600, color: 'var(--color-accent)', textTransform: 'capitalize', letterSpacing: '0.5px' }}>
+                                        {value.replace(/-/g, ' ')}
+                                    </span>
+                                ) : (
+                                    <Link to={to} style={{ color: 'rgba(255, 255, 255, 0.8)', textTransform: 'capitalize', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = 'white'} onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}>
+                                        {value.replace(/-/g, ' ')}
+                                    </Link>
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </nav>
     );

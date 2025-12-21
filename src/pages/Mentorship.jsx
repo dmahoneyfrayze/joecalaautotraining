@@ -41,9 +41,10 @@ const Mentorship = () => {
                 description="Join an elite group of sales professionals. Weekly coaching, private scripts, and accountability to transform your career. Perfect for US and Canada dealership teams."
                 keywords="sales mentorship, car sales coaching, dealership leadership, Joe Cala mentorship, automotive sales success"
             />
-            <section className="mentorship-hero" style={{ backgroundColor: '#0F102A', color: 'white', padding: '180px 0 100px', position: 'relative', overflow: 'hidden' }}>
+            {/* Mentorship Hero */}
+            <section className="mentorship-hero" style={{ backgroundColor: '#0F102A', color: 'white', padding: '180px 0 150px', position: 'relative', overflow: 'hidden' }}>
                 {/* Background Accent */}
-                <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '400px', height: '400px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%)', zIndex: 0 }}></div>
+                <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '400px', height: '400px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%)', zIndex: 0, filter: 'blur(50px)' }}></div>
 
                 <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <Breadcrumbs />
@@ -60,7 +61,7 @@ const Mentorship = () => {
                             animate={{ y: 0, opacity: 1 }}
                             style={{ fontSize: '4rem', marginBottom: '2rem' }}
                         >
-                            Master Your Sales Craft <br /> for Just <span style={{ color: 'var(--color-accent)' }}>$27/Month</span>
+                            Master Your Sales Craft <br /> for Just <span className="text-gradient-gold">$27/Month</span>
                         </motion.h1>
                         <p style={{ fontSize: '1.2rem', marginBottom: '3rem', opacity: 0.9 }}>
                             The Salesperson Mentorship Program is designed for high-achievers who want to dominate the automotive market while maintaining their core values.
@@ -71,9 +72,16 @@ const Mentorship = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Wave Separator */}
+                <div className="wave-separator-bottom">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+                    </svg>
+                </div>
             </section>
 
-            <section id="details" className="mentorship-details">
+            <section id="details" className="mentorship-details" style={{ padding: '100px 0' }}>
                 <div className="container">
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center' }}>
                         <div style={{ flex: '1 1 400px' }}>
@@ -82,17 +90,31 @@ const Mentorship = () => {
                                 Being a salesperson can be isolating. Most training is outdated or focuses purely on "closing the deal" at any cost. We do things differently. Our <Link to="/academy" style={{ color: 'var(--color-accent)', fontWeight: 600 }}>Training Academy</Link> provides the technical foundation, while this mentorship provides the personal growth.
                             </p>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-                                {benefits.map(benefit => (
-                                    <div key={benefit} style={{ display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}>
+                                {benefits.map((benefit, index) => (
+                                    <motion.div
+                                        key={benefit}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: index * 0.1 }}
+                                        style={{ display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}
+                                    >
                                         <CheckCircle size={20} style={{ color: 'var(--color-accent)', flexShrink: 0 }} />
                                         <span style={{ fontWeight: 500 }}>{benefit}</span>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </div>
                         <div style={{ flex: '1 1 400px' }}>
-                            <div className="glass-dark" style={{ padding: '3rem', borderRadius: '15px', color: 'white', position: 'relative' }}>
-                                <div style={{ position: 'absolute', top: '-15px', right: '-15px', width: '80px', height: '80px', backgroundColor: 'var(--color-accent)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 700, fontSize: '0.9rem', textAlign: 'center' }}>
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                                className="glass-dark"
+                                style={{ padding: '3rem', borderRadius: '15px', color: 'white', position: 'relative' }}
+                            >
+                                <div style={{ position: 'absolute', top: '-15px', right: '-15px', width: '80px', height: '80px', backgroundColor: 'var(--color-accent)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 700, fontSize: '0.9rem', textAlign: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.2)' }}>
                                     ONLY <br /> $27
                                 </div>
                                 <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Monthly Subscription</h3>
@@ -105,7 +127,7 @@ const Mentorship = () => {
                                     <li>✓ Exclusive Resources & Templates</li>
                                 </ul>
                                 <a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ width: '100%', textAlign: 'center', display: 'block' }}>Secure Your Spot <ArrowRight size={18} style={{ marginLeft: '10px' }} /></a>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

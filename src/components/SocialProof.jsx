@@ -28,10 +28,10 @@ const testimonials = [
 
 const SocialProof = () => {
     return (
-        <section className="social-proof-section" style={{ padding: '100px 0', backgroundColor: '#f8f9fa' }}>
+        <section className="social-proof-section" style={{ padding: '120px 0', backgroundColor: '#fcfcfc' }}>
             <div className="container">
                 <FadeIn direction="up">
-                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
                         <span style={{
                             color: 'var(--color-accent)',
                             fontWeight: 700,
@@ -41,98 +41,105 @@ const SocialProof = () => {
                             display: 'block',
                             marginBottom: '1rem'
                         }}>
-                            Trusted By Leaders
+                            Trusted By Industry Leaders
                         </span>
-                        <h2 className="section-title">Success Stories</h2>
+                        <h2 className="section-title" style={{ color: 'var(--color-primary)' }}>Results That Speak Louder.</h2>
+                        <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.2rem', opacity: 0.8 }}>
+                            From local family-owned dealerships to Fortune 500 enterprise sales teams, our methodology delivers consistent, scalable growth.
+                        </p>
                     </div>
                 </FadeIn>
 
+                {/* Logos Grid */}
+                <FadeIn delay={0.2} style={{ marginBottom: '6rem' }}>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        gap: '4rem',
+                        flexWrap: 'wrap',
+                        opacity: 0.5
+                    }}>
+                        {/* Text-based Logos for Premium Feel */}
+                        {['AutoNation', 'Penske', 'Berkshire Hathaway', 'Group 1', 'Sonic Automotive', 'Lithia'].map((brand, i) => (
+                            <h3 key={i} style={{
+                                fontSize: '1.8rem',
+                                fontFamily: 'var(--font-serif)',
+                                color: '#000',
+                                margin: 0,
+                                filter: 'grayscale(100%)',
+                                cursor: 'default'
+                            }}>
+                                {brand}
+                            </h3>
+                        ))}
+                    </div>
+                </FadeIn>
+
+
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
                     gap: '2.5rem'
                 }}>
                     {testimonials.map((t, i) => (
                         <FadeIn key={i} delay={i * 0.1} direction="up">
                             <motion.div
-                                whileHover={{ y: -5 }}
+                                className="card-premium"
                                 style={{
-                                    padding: '3rem',
-                                    backgroundColor: 'white',
+                                    padding: '3.5rem',
                                     borderRadius: '16px',
-                                    boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
                                     height: '100%',
                                     position: 'relative',
-                                    overflow: 'hidden'
+                                    display: 'flex',
+                                    flexDirection: 'column'
                                 }}
                             >
                                 <Quote
-                                    size={60}
+                                    size={50}
                                     color="var(--color-accent)"
-                                    style={{ position: 'absolute', top: '20px', right: '20px', opacity: 0.1 }}
+                                    style={{ position: 'absolute', top: '30px', left: '30px', opacity: 0.2 }}
                                 />
 
-                                <div style={{ display: 'flex', gap: '0.2rem', marginBottom: '1.5rem', color: 'var(--color-accent)' }}>
+                                <div style={{ display: 'flex', gap: '0.2rem', marginBottom: '2rem', color: 'var(--color-accent)', justifyContent: 'center' }}>
                                     {[...Array(t.rating)].map((_, j) => (
-                                        <Star key={j} size={18} fill="currentColor" />
+                                        <Star key={j} size={20} fill="currentColor" />
                                     ))}
                                 </div>
 
                                 <p style={{
                                     fontStyle: 'italic',
                                     marginBottom: '2rem',
-                                    fontSize: '1.1rem',
+                                    fontSize: '1.25rem',
                                     lineHeight: 1.6,
                                     color: 'var(--color-text-dark)',
-                                    opacity: 0.85
+                                    opacity: 0.9,
+                                    textAlign: 'center'
                                 }}>
                                     "{t.quote}"
                                 </p>
 
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: 'auto' }}>
-                                    {/* Placeholder avatar if image fails to load, but we use the url provided */}
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginTop: 'auto', borderTop: '1px solid #eee', paddingTop: '1.5rem', width: '100%' }}>
+
                                     <div style={{
-                                        width: '50px',
-                                        height: '50px',
+                                        width: '60px',
+                                        height: '60px',
                                         borderRadius: '50%',
                                         overflow: 'hidden',
-                                        backgroundColor: '#eee'
+                                        backgroundColor: '#eee',
+                                        border: '2px solid var(--color-accent)'
                                     }}>
                                         <img src={t.image} alt={t.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </div>
-                                    <div>
-                                        <h4 style={{ fontSize: '1.1rem', fontWeight: 600 }}>{t.name}</h4>
-                                        <p style={{ fontSize: '0.85rem', opacity: 0.6 }}>{t.role}</p>
+                                    <div style={{ textAlign: 'left' }}>
+                                        <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--color-primary)' }}>{t.name}</h4>
+                                        <p style={{ fontSize: '0.85rem', opacity: 0.6, color: 'var(--color-text-dark)' }}>{t.role}</p>
                                     </div>
                                 </div>
                             </motion.div>
                         </FadeIn>
                     ))}
                 </div>
-
-                {/* Trusted By Logos Strip (Abstract/Text for now) */}
-                <FadeIn delay={0.4} direction="up" style={{ marginTop: '6rem', opacity: 0.6 }}>
-                    <p style={{ textAlign: 'center', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '2rem' }}>
-                        Trusted by professionals from top dealerships
-                    </p>
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        gap: '4rem',
-                        flexWrap: 'wrap',
-                        alignItems: 'center',
-                        filter: 'grayscale(100%)',
-                        fontWeight: 700,
-                        fontSize: '1.5rem',
-                        color: '#aaa'
-                    }}>
-                        <span>AutoNation</span>
-                        <span>Penske</span>
-                        <span>Group 1</span>
-                        <span>Lithia</span>
-                        <span>Hendrick</span>
-                    </div>
-                </FadeIn>
             </div>
         </section>
     );
