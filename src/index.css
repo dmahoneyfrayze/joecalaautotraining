@@ -31,15 +31,19 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  min-height: 100vh;
   position: relative;
-  min-height: 101vh;
-  /* Force scrollbar to prevent layout shift */
 }
 
 h1,
