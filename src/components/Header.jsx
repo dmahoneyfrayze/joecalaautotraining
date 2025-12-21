@@ -9,10 +9,25 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const root = document.getElementById('root');
+      // Check #root scrollTop first (App Shell mode), fallback to window (Standard mode)
+      const scrollTop = root ? root.scrollTop : window.scrollY;
+      setScrolled(scrollTop > 50);
     };
+
+    const root = document.getElementById('root');
+    // Attach listener to #root if it exists (App Shell), otherwise window
+    if (root) {
+      root.addEventListener('scroll', handleScroll);
+    }
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      if (root) {
+        root.removeEventListener('scroll', handleScroll);
+      }
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const navLinks = [
@@ -39,11 +54,17 @@ const Header = () => {
         }
         .header.scrolled {
           padding: 1rem 0;
-          background: rgba(26, 27, 65, 0.95); /* Nearly opaque dark blue for better readability */
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+          background: #1A1B41 !important; /* Force solid dark opacity */
+          backdrop-filter: none; /* Remove blur to ensure solid color */
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header.scrolled .nav-link {
+          color: #ffffff !important;
+          opacity: 1;
+        }
+        .header.scrolled .logo {
+          color: #ffffff !important;
         }
         .nav-container {
           display: flex;
@@ -55,6 +76,7 @@ const Header = () => {
           font-size: 1.8rem;
           font-weight: 700;
           color: var(--color-text-light);
+          transition: color 0.3s ease;
         }
         .logo span {
           color: var(--color-accent);
@@ -70,10 +92,11 @@ const Header = () => {
           text-transform: uppercase;
           font-size: 0.9rem;
           opacity: 0.8;
+          transition: all 0.3s ease;
         }
         .nav-link:hover, .nav-link.active {
           opacity: 1;
-          color: var(--color-accent);
+          color: var(--color-accent) !important;
         }
         .mobile-menu-btn {
           display: none;
