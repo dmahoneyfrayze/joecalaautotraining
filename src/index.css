@@ -56,6 +56,8 @@ body {
   display: flex;
   /* Keep flex for layout if needed, or block */
   flex-direction: column;
+  scrollbar-gutter: stable;
+  /* Stabilize internal layout width */
 }
 
 h1,
