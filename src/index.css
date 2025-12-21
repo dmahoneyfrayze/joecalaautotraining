@@ -32,7 +32,9 @@
 }
 
 html {
-  /* Forces scrollbar to prevent jitter */
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  /*Reserves space for scrollbar to prevent layout shift*/
 }
 
 body {
@@ -41,6 +43,8 @@ body {
   color: var(--color-text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
 }
 
 h1,
