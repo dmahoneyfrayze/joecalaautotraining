@@ -39,10 +39,11 @@ const Header = () => {
         }
         .header.scrolled {
           padding: 1rem 0;
-          background: var(--color-glass-dark);
+          background: rgba(26, 27, 65, 0.95); /* Nearly opaque dark blue for better readability */
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         .nav-container {
           display: flex;
