@@ -24,7 +24,7 @@ const BlogPost = () => {
                 description={post.excerpt}
             />
 
-            <article style={{ paddingTop: '140px', paddingBottom: '100px' }}>
+            <div className="blog-post-hero" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'white', padding: '160px 0 80px' }}>
                 <div className="container" style={{ maxWidth: '900px' }}>
                     <div style={{ marginBottom: '2rem' }}>
                         <Breadcrumbs />
@@ -33,24 +33,29 @@ const BlogPost = () => {
                         </Link>
                     </div>
 
-                    <header style={{ marginBottom: '3rem' }}>
+                    <header style={{ marginBottom: '0' }}>
                         <div style={{ color: 'var(--color-accent)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1rem' }}>
                             {post.category}
                         </div>
-                        <h1 style={{ fontSize: '3.5rem', lineHeight: '1.2', marginBottom: '1.5rem', fontFamily: 'var(--font-serif)' }}>
+                        <h1 style={{ fontSize: '3.5rem', lineHeight: '1.2', marginBottom: '1.5rem', fontFamily: 'var(--font-serif)', color: 'white' }}>
                             {post.title}
                         </h1>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center', opacity: 0.7, borderBottom: '1px solid #eee', paddingBottom: '2rem' }}>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center', opacity: 0.8, color: 'rgba(255,255,255,0.8)' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                 <User size={18} />
-                                <span>{post.author}</span>
+                                <span style={{ color: 'white' }}>{post.author}</span>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                 <Calendar size={18} />
-                                <span>{post.date}</span>
+                                <span style={{ color: 'white' }}>{post.date}</span>
                             </div>
                         </div>
                     </header>
+                </div>
+            </div>
+
+            <article style={{ paddingBottom: '100px', paddingTop: '60px' }}>
+                <div className="container" style={{ maxWidth: '900px' }}>
 
                     <div style={{ marginBottom: '3rem', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
                         <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
@@ -65,6 +70,33 @@ const BlogPost = () => {
                         }}
                         dangerouslySetInnerHTML={{ __html: post.content }}
                     />
+
+                    <div style={{ margin: '4rem 0', padding: '3rem', backgroundColor: 'var(--color-bg-light)', borderRadius: '12px', border: '1px solid rgba(0,0,0,0.05)', textAlign: 'center' }}>
+                        <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Ready to Master Your Sales Skills?</h3>
+                        <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.8, maxWidth: '600px', margin: '0 auto 2rem' }}>
+                            Don't just read about success—build it. Join Joe Cala's exclusive mentorship program and get direct access to world-class sales training.
+                        </p>
+                        <Link
+                            to="/mentorship"
+                            className="btn-primary"
+                            style={{
+                                display: 'inline-block',
+                                padding: '1rem 2.5rem',
+                                fontSize: '1.1rem',
+                                textDecoration: 'none',
+                                backgroundColor: 'var(--color-accent)',
+                                color: 'white',
+                                borderRadius: '50px',
+                                fontWeight: 700,
+                                boxShadow: '0 10px 20px rgba(255, 62, 62, 0.3)'
+                            }}
+                        >
+                            Start Your 30-Day Free Trial
+                        </Link>
+                        <p style={{ marginTop: '1rem', fontSize: '0.9rem', opacity: 0.6 }}>
+                            Only $27/mo after trial. Cancel anytime.
+                        </p>
+                    </div>
 
                     <footer style={{ marginTop: '5rem', paddingTop: '3rem', borderTop: '1px solid #eee' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>

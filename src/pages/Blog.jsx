@@ -16,7 +16,7 @@ const Blog = () => {
                 description="Daily insights on automotive sales tactics, faith-based leadership, and high-performance mindset."
             />
 
-            <section className="blog-hero" style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '160px 0 80px' }}>
+            <section className="blog-hero" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'white', padding: '160px 0 80px' }}>
                 <div className="container">
                     <motion.h1
                         initial={{ y: 20, opacity: 0 }}

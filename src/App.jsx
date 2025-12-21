@@ -22,7 +22,6 @@ import Toronto from './pages/locations/Toronto';
 import MyrtleBeach from './pages/locations/MyrtleBeach';
 import SalesTraining from './pages/pillars/SalesTraining';
 import Terms from './pages/Terms';
-import Privacy from './pages/Privacy';
 
 function App() {
   const location = useLocation();
@@ -30,6 +29,7 @@ function App() {
   return (
     <div className="app">
       <FadeIn>
+        <ScrollToTop />
         <Header />
         <AnimatePresence mode='wait'>
           <Routes location={location} key={location.pathname}>
@@ -46,7 +46,7 @@ function App() {
             <Route path="/locations/myrtle-beach" element={<MyrtleBeach />} />
             <Route path="/training/automotive-sales" element={<SalesTraining />} />
             <Route path="/terms" element={<Terms />} />
-            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
           </Routes>
         </AnimatePresence>
         <Footer />
