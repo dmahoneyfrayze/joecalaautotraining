@@ -46,6 +46,8 @@ body {
   overflow: hidden;
   /* Lock body */
   position: relative;
+  overscroll-behavior: none;
+  /* Prevent rubber-banding */
 }
 
 #root {
