@@ -37,19 +37,33 @@ const SEO = ({ title, description, keywords, canonical }) => {
         const siteUrl = window.location.origin;
         linkCanonical.setAttribute('href', canonical || `${siteUrl}${location.pathname}`);
 
-        // Update Open Graph (OG) tags
+        // Update Open Graph (OG) & Twitter tags
         const ogTags = [
             { property: 'og:title', content: fullTitle },
             { property: 'og:description', content: description },
+            { property: 'og:image', content: 'https://josephacala.com/images/logo.png' },
             { property: 'og:url', content: canonical || `${siteUrl}${location.pathname}` },
             { property: 'og:type', content: 'website' },
+            { property: 'twitter:card', content: 'summary_large_image' },
+            { property: 'twitter:title', content: fullTitle },
+            { property: 'twitter:description', content: description },
+            { property: 'twitter:image', content: 'https://josephacala.com/images/logo.png' },
         ];
 
         ogTags.forEach(tag => {
             let element = document.querySelector(`meta[property="${tag.property}"]`);
             if (!element) {
+                // Try searching by name for twitter tags if property search fails (common compatibility)
+                element = document.querySelector(`meta[name="${tag.property}"]`);
+            }
+            if (!element) {
                 element = document.createElement('meta');
-                element.setAttribute('property', tag.property);
+                // Use 'name' for twitter cards, 'property' for OG
+                if (tag.property.startsWith('twitter:')) {
+                    element.setAttribute('name', tag.property);
+                } else {
+                    element.setAttribute('property', tag.property);
+                }
                 document.head.appendChild(element);
             }
             element.setAttribute('content', tag.content);
