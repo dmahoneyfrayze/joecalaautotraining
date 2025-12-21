@@ -176,5 +176,39 @@ export const blogPosts = [
         <a href="/academy" style="display: inline-block; padding: 0.8rem 1.5rem; background: var(--color-primary); color: white; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 1rem;">View Closing Course</a>
       </div>
     `
+  },
+  {
+    id: 7,
+    title: "The Speed-to-Lead Revolution: Why Your Dealership Needs a 'Growth Engine'",
+    slug: "frayze-growth-engine-vs-crm",
+    date: "December 08, 2025",
+    author: "Joe Cala",
+    category: "Technology",
+    excerpt: "Your CRM is a database. You need a communication engine. Discover how platforms like Frayze.ca are helping Canadian dealers capture the 62% of calls that go to voicemail.",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200",
+    content: `
+      <h2>The "Database" vs. "Communication" Problem</h2>
+      <p>Most dealerships treat their CRM (like CDK or Reynolds) as the holy grail. But let's be honest: those are databases. They are excellent at storing records, contracts, and repair orders. They are terrible at <strong>communication</strong>.</p>
+      
+      <h3>The Gap: Where Leads Die</h3>
+      <p>The average dealership misses 20-30% of inbound calls. Of those, 85% will never leave a voicemail. They just hang up and call the next dealer. If your CRM isn't instantly texting that customer back, you have lost the deal before you knew it existed.</p>
+      
+      <h3>Enter the "Growth Engine"</h3>
+      <p>Modern Canadian dealers are layering tools like <strong>Frayze.ca</strong> on top of their heavy DMS. Frayze isn't a replacement; it's an engine designed for speed.</p>
+      <ul>
+        <li><strong>Unified Inbox:</strong> Stop checking three different tabs. SMS, Instagram DMs, Facebook Messenger, and Email all land in one place.</li>
+        <li><strong>Missed Call Text Back:</strong> The moment a call remains unanswered, the system texts: <em>"Sorry we missed you! How can we help?"</em> This simple automation saves dozens of deals a month.</li>
+        <li><strong>Smart Integrations:</strong> Tools like this play nice with others. You can have <strong>AutoCorp.ai</strong> handling your secure credit apps and trade valuations upfront, while Frayze manages the communication flow to get them into the showroom.</li>
+      </ul>
+      
+      <h3>Technology Needs a Driver</h3>
+      <p>The best tools in the world are useless if your team sounds like a robot. The goal of automation is to buy your salespeople time so they can be <em>more human</em> when it matters.</p>
+
+      <div class="cta-box" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-light); border-left: 4px solid var(--color-primary); border-radius: 8px;">
+        <h4 style="margin-top: 0; color: var(--color-primary);">Train the Human Side</h4>
+        <p>Once Frayze captures the lead, what do you say? Master the conversation in our <strong>Internet Lead Handling</strong> certification.</p>
+        <a href="/academy" style="display: inline-block; padding: 0.8rem 1.5rem; background: var(--color-primary); color: white; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 1rem;">View Certification</a>
+      </div>
+    `
   }
 ];
