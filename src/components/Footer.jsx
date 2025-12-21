@@ -12,9 +12,9 @@ const Footer = () => {
                             Transforming lives and businesses through purpose-driven leadership and world-class training.
                         </p>
                         <div style={{ display: 'flex', gap: '1.5rem' }}>
-                            <a href="https://www.facebook.com/josephacalajr" target="_blank" rel="noopener noreferrer" className="social-link"><Facebook size={20} /></a>
-                            <a href="https://www.linkedin.com/company/jc-training-and-development/" target="_blank" rel="noopener noreferrer" className="social-link"><Linkedin size={20} /></a>
-                            <a href="https://www.youtube.com/@josephacalajr" target="_blank" rel="noopener noreferrer" className="social-link"><Youtube size={20} /></a>
+                            <a href="https://www.facebook.com/josephacalajr" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Follow us on Facebook"><Facebook size={20} /></a>
+                            <a href="https://www.linkedin.com/company/jc-training-and-development/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Connect on LinkedIn"><Linkedin size={20} /></a>
+                            <a href="https://www.youtube.com/@josephacalajr" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Subscribe to our YouTube channel"><Youtube size={20} /></a>
                         </div>
                     </div>
 

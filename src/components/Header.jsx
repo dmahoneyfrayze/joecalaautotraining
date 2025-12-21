@@ -156,7 +156,11 @@ const Header = () => {
           ))}
         </ul>
 
-        <button className="mobile-menu-btn" onClick={() => setIsOpen(true)}>
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setIsOpen(true)}
+          aria-label="Toggle menu"
+        >
           <Menu size={24} />
         </button>
       </div>
@@ -165,6 +169,7 @@ const Header = () => {
         <button
           style={{ position: 'absolute', top: '2rem', right: '2rem', color: 'white' }}
           onClick={() => setIsOpen(false)}
+          aria-label="Close menu"
         >
           <X size={32} />
         </button>

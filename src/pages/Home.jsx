@@ -75,8 +75,10 @@ const Home = () => {
                     >
                         <img
                             src="/images/joe-portrait-1.jpg"
-                            alt="Joe Cala"
-                            style={{ width: '100%', borderRadius: '24px', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}
+                            alt="Joe Cala - High Ticket Sales Trainer"
+                            width="450"
+                            height="560"
+                            style={{ width: '100%', height: 'auto', borderRadius: '24px', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}
                         />
                         <div className="glass" style={{ position: 'absolute', bottom: '30px', left: '-30px', padding: '1.5rem', borderRadius: '12px', fontWeight: 700, boxShadow: 'var(--shadow-premium)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>
                             <div style={{ color: 'var(--color-accent)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.2rem' }}>Trusted Authority</div>
