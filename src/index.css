@@ -32,7 +32,9 @@
 }
 
 html {
-  scrollbar-gutter: stable;
+  overflow-y: scroll;
+  /* Forces scrollbar to be always visible to prevent layout shift/bounce */
+  overflow-x: hidden;
 }
 
 body {
@@ -41,6 +43,7 @@ body {
   color: var(--color-text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
 }
 
 h1,
