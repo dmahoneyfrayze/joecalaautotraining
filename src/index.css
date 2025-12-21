@@ -31,12 +31,16 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: var(--font-sans);
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  overflow-y: scroll;
+  /* Forces scrollbar to prevent jitter */
+  width: 100%;
 }
 
 h1,

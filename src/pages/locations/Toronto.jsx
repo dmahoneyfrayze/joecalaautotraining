@@ -86,12 +86,33 @@ const Toronto = () => {
                             <p>On-site workshops in the GTA combined with our 24/7 digital academy for continuous reinforcement.</p>
                         </div>
                     </div>
-                    <div style={{ marginTop: '3rem' }}>
-                        <Link to="/contact" className="btn-primary">Schedule a Consultation</Link>
+                </div>
+
+                <div style={{ margin: '5rem auto 0', maxWidth: '800px', textAlign: 'left' }}>
+                    <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Toronto Sales Training FAQs</h2>
+
+                    <div style={{ marginBottom: '2rem' }}>
+                        <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Is your training OMVIC aligned?</h3>
+                        <p style={{ opacity: 0.8 }}>Yes. We understand the specific regulatory environment in Ontario. All our scripts and closing techniques are designed to be fully compliant with OMVIC's code of ethics and all-in pricing regulations, protecting your dealer license while maximizing gross.</p>
+                    </div>
+
+                    <div style={{ marginBottom: '2rem' }}>
+                        <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Do you service dealerships outside the GTA?</h3>
+                        <p style={{ opacity: 0.8 }}>Absolutely. We actively support dealer groups across the Golden Horseshoe, including Mississauga, Oakville, Burlington, Brampton, Vaughan, and Oshawa. We also have clients in Ottawa and London.</p>
+                    </div>
+
+                    <div style={{ marginBottom: '2rem' }}>
+                        <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Can we claim the Canada-Ontario Job Grant (COJG)?</h3>
+                        <p style={{ opacity: 0.8 }}>Many of our corporate training workshops qualify for the COJG, which can cover up to 83% of your training costs. We can provide the necessary curriculum documentation to assist your controller with the application.</p>
                     </div>
                 </div>
-            </section>
-        </motion.div>
+
+                <div style={{ marginTop: '5rem' }}>
+                    <Link to="/contact" className="btn-primary">Schedule a Consultation</Link>
+                </div>
+            </div>
+        </section>
+        </motion.div >
     );
 };
 
