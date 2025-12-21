@@ -280,13 +280,49 @@ section {
   fill: #1A1B41;
 }
 
-/* Gradient Masks */
-.gradient-mask-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(to bottom, transparent, var(--color-bg-light));
-  pointer-events: none;
+background: linear-gradient(to bottom, transparent, var(--color-bg-light));
+pointer-events: none;
+}
+
+/* Mobile Responsiveness Utilities */
+@media (max-width: 768px) {
+  .responsive-padding {
+    padding: 2rem !important;
+  }
+
+  .responsive-padding-small {
+    padding: 1.5rem !important;
+  }
+
+  .text-giant {
+    font-size: 4rem !important;
+  }
+
+  .flex-responsive {
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
+  .w-full-mobile {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+.text-giant {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
 }

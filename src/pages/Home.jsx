@@ -224,10 +224,10 @@ const Home = () => {
             {/* Featured Mentorship */}
             <section className="featured-mentorship" style={{ padding: '120px 0' }}>
                 <FadeIn className="container">
-                    <div className="glass-dark" style={{ padding: '5rem', borderRadius: '24px', color: 'white', display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center' }}>
+                    <div className="glass-dark responsive-padding flex-responsive" style={{ borderRadius: '24px', color: 'white' }}>
                         <div style={{ flex: '1 1 400px' }}>
                             <span style={{ color: 'var(--color-accent)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '1.5rem' }}>Exclusive Program</span>
-                            <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Salesperson Mentorship</h2>
+                            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '2rem' }}>Salesperson Mentorship</h2>
                             <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', opacity: 0.9 }}>
                                 Join an elite community of high-ticket sales professionals. Get direct access to training that has generated millions in revenue across multiple industries.
                             </p>
@@ -236,10 +236,10 @@ const Home = () => {
                                 <li style={{ display: 'flex', gap: '0.8rem' }}><span style={{ color: 'var(--color-accent)' }}>✓</span> Private Networking Hub</li>
                                 <li style={{ display: 'flex', gap: '0.8rem' }}><span style={{ color: 'var(--color-accent)' }}>✓</span> Exclusive Script Library</li>
                             </ul>
-                            <Link to="/mentorship" className="btn-primary">Enroll for $27/Month</Link>
+                            <Link to="/mentorship" className="btn-primary" style={{ display: 'inline-block', textAlign: 'center', width: 'auto' }}>Enroll for $27/Month</Link>
                         </div>
-                        <div style={{ flex: '1 1 300px', textAlign: 'center' }}>
-                            <div style={{ fontSize: '8rem', fontWeight: 700, color: 'var(--color-accent)', lineHeight: 1 }}>$27</div>
+                        <div className="w-full-mobile" style={{ flex: '1 1 300px', textAlign: 'center' }}>
+                            <div className="text-giant">$27</div>
                             <p style={{ fontSize: '1.5rem', textTransform: 'uppercase', letterSpacing: '4px', opacity: 0.6 }}>Per Month</p>
                         </div>
                     </div>

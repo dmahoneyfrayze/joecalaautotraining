@@ -19,19 +19,14 @@ const LeadMagnet = () => {
 
             <div className="container" style={{ padding: '80px 2rem' }}>
                 <FadeIn>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        alignItems: 'center',
-                        gap: '4rem',
+                    <div className="responsive-padding flex-responsive" style={{
                         backgroundColor: 'var(--color-glass-white)',
                         backdropFilter: 'blur(10px)',
-                        padding: '4rem',
                         borderRadius: '24px',
                         border: '1px solid rgba(255,255,255,0.1)',
                         boxShadow: 'var(--shadow-premium)'
                     }}>
-                        <div style={{ flex: '1 1 400px', color: 'white' }}>
+                        <div style={{ flex: '1 1 300px', color: 'white' }}>
                             <div style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
@@ -46,7 +41,7 @@ const LeadMagnet = () => {
                                 <span style={{ color: 'var(--color-accent)', fontWeight: 600, fontSize: '0.9rem' }}>Free Resource</span>
                             </div>
 
-                            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', lineHeight: 1.2 }}>
+                            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '1.5rem', lineHeight: 1.2 }}>
                                 Master the Art of <span style={{ color: 'var(--color-accent)' }}>Objection Handling</span>
                             </h2>
 
@@ -66,11 +61,10 @@ const LeadMagnet = () => {
                             </ul>
                         </div>
 
-                        <div style={{ flex: '1 1 350px' }}>
+                        <div className="w-full-mobile" style={{ flex: '1 1 350px' }}>
                             {!submitted ? (
-                                <form onSubmit={handleSubmit} style={{
+                                <form onSubmit={handleSubmit} className="responsive-padding-small" style={{
                                     backgroundColor: 'white',
-                                    padding: '2.5rem',
                                     borderRadius: '16px',
                                     boxShadow: '0 20px 40px rgba(0,0,0,0.2)'
                                 }}>
