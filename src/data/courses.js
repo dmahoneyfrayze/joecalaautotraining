@@ -110,6 +110,60 @@ export const courses = [
         category: "Skill Mastery",
         isBundle: false
     },
+    {
+        id: 'environment-for-success',
+        title: "Create an Environment for Success",
+        lessons: "12 lessons",
+        price: "$47/mo",
+        description: "Learn how to curate your workspace, mindset, and daily routine to eliminate distractions and foster high-performance.",
+        category: "Skill Mastery",
+        isBundle: false
+    },
+    {
+        id: 'success-habits',
+        title: "Success Habits of Top Producers",
+        lessons: "18 lessons",
+        price: "$47/mo",
+        description: "The daily disciplines that separate the top 1% from the average. Routine, health, tracking, and continuous learning.",
+        category: "Skill Mastery",
+        isBundle: false
+    },
+    {
+        id: 'crm-mastery',
+        title: "Importance of CRM & Data Management",
+        lessons: "15 lessons",
+        price: "$47/mo",
+        description: "Stop losing money to bad data. Master your CRM to ensure no lead is left behind and follow-up is automatic.",
+        category: "Skill Mastery",
+        isBundle: false
+    },
+    {
+        id: 'ai-in-sales',
+        title: "AI in Sales: Future-Proof Your Career",
+        lessons: "20 lessons",
+        price: "$97/mo",
+        description: "Leverage Artificial Intelligence to speed up communication, write better emails, and predict customer needs.",
+        category: "Skill Mastery",
+        isBundle: false
+    },
+    {
+        id: 'vip-appointments',
+        title: "Setting VIP Appointments",
+        lessons: "22 lessons",
+        price: "$97/mo",
+        description: "Move away from 'checking availability' to setting firm, VIP appointments that customers are excited to attend.",
+        category: "Skill Mastery",
+        isBundle: false
+    },
+    {
+        id: 'show-rate-mastery',
+        title: "Increase Appointment Show Rate",
+        lessons: "14 lessons",
+        price: "$97/mo",
+        description: "Proven confirmation scripts and value-building techniques that ensure your appointments actually show up.",
+        category: "Skill Mastery",
+        isBundle: false
+    },
 
     // --- BUNDLES ---
     {

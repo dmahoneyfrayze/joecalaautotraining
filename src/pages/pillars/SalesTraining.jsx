@@ -70,6 +70,30 @@ const SalesTraining = () => {
                         </div>
                     </div>
 
+                    <div style={{ marginTop: '8rem', marginBottom: '4rem' }}>
+                        <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem' }}>
+                            <h2 className="section-title">Core Training Modules</h2>
+                            <p style={{ fontSize: '1.1rem', opacity: 0.8 }}>
+                                Our curriculum evolves with the market. Here are just a few of the high-impact modules your team will master.
+                            </p>
+                        </div>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+                            {[
+                                "Create an Environment for Success",
+                                "Success Habits & Consistency",
+                                "Importance of CRM Excellence",
+                                "AI in Modern Sales",
+                                "The VIP Appointment Strategy",
+                                "Increasing Appointment Show Rates"
+                            ].map((item, i) => (
+                                <div key={i} style={{ padding: '1.5rem', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                    <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: 'var(--color-accent)' }}></div>
+                                    <span style={{ fontWeight: 600, color: 'var(--color-primary)' }}>{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                     <div style={{ marginTop: '4rem', textAlign: 'center' }}>
                         <Link to="/academy" className="btn-primary">Explore the Curriculum</Link>
                     </div>
