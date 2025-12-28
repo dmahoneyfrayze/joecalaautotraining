@@ -58,7 +58,7 @@ const Home = () => {
                             transition={{ delay: 0.6, duration: 0.8 }}
                             style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}
                         >
-                            <Link to="/mentorship" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
+                            <Link to="/mentorship" className="btn-primary" aria-label="Start Your Mentorship Journey" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
                                 Start Your Journey <ArrowRight size={20} />
                             </Link>
                             <Link to="/what-we-do" className="btn-secondary" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
@@ -119,7 +119,7 @@ const Home = () => {
                                     <div style={{ width: '60px', height: '60px', margin: '0 auto 1.5rem', backgroundColor: 'var(--color-primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
                                         <Briefcase size={28} />
                                     </div>
-                                    <h3 style={{ fontSize: '1.8rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>For Individuals</h3>
+                                    <h2 style={{ fontSize: '1.8rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>For Individuals</h2>
                                     <p style={{ opacity: 0.7, marginBottom: '1.5rem', color: 'var(--color-text)' }}>
                                         Salespeople, Managers, and Leaders looking to master their craft and accelerate their career.
                                     </p>
@@ -149,7 +149,7 @@ const Home = () => {
                                     <div style={{ width: '60px', height: '60px', margin: '0 auto 1.5rem', backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-accent)' }}>
                                         <Users size={28} />
                                     </div>
-                                    <h3 style={{ fontSize: '1.8rem', color: 'white', marginBottom: '1rem' }}>For Dealerships</h3>
+                                    <h2 style={{ fontSize: '1.8rem', color: 'white', marginBottom: '1rem' }}>For Dealerships</h2>
                                     <p style={{ opacity: 0.8, marginBottom: '1.5rem', color: 'rgba(255,255,255,0.8)' }}>
                                         Dealer Principals and Groups seeking scalable training systems and culture transformation.
                                     </p>

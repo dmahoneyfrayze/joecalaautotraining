@@ -2,17 +2,20 @@ import { useEffect } from 'react';
 
 const ReviewWidget = () => {
     useEffect(() => {
-        const script = document.createElement('script');
-        script.src = "https://reputationhub.site/reputation/assets/review-widget.js";
-        script.async = true;
-        document.body.appendChild(script);
+        const timer = setTimeout(() => {
+            const script = document.createElement('script');
+            script.src = "https://reputationhub.site/reputation/assets/review-widget.js";
+            script.async = true;
+            document.body.appendChild(script);
 
-        return () => {
-            // Clean up if component unmounts
-            if (document.body.contains(script)) {
-                document.body.removeChild(script);
+            return () => {
+                if (document.body.contains(script)) {
+                    document.body.removeChild(script);
+                }
             }
-        }
+        }, 3000); // Defer loading by 3 seconds to unblock initial render
+
+        return () => clearTimeout(timer);
     }, []);
 
     return (

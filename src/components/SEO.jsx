@@ -38,7 +38,11 @@ const SEO = ({ title, description, keywords, canonical, image }) => {
             document.head.appendChild(linkCanonical);
         }
         const siteUrl = window.location.origin;
-        linkCanonical.setAttribute('href', canonical || `${siteUrl}${location.pathname}`);
+        let canonicalPath = canonical || `${siteUrl}${location.pathname}`;
+        if (!canonicalPath.endsWith('/')) {
+            canonicalPath += '/';
+        }
+        linkCanonical.setAttribute('href', canonicalPath);
 
         // Update Open Graph (OG) & Twitter tags
         const ogTags = [
