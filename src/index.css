@@ -34,15 +34,17 @@
 /* html { } - Removed custom scroll lock */
 
 html {
-  overscroll-behavior-y: none;
+  height: 100%;
+  overscroll-behavior: none;
 }
 
 body {
+  min-height: 100%;
   font-family: var(--font-sans);
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   line-height: 1.6;
-  overscroll-behavior-y: none;
+  overscroll-behavior: none;
 }
 
 #root {

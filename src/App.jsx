@@ -55,13 +55,6 @@ function App() {
         </AnimatePresence>
       </Suspense>
       <Footer />
-      {/* Loading is now used as fallback, but we keep the global one if needed or remove it if redundant? 
-          Actually Loading seems to be a fixed overlay. Using it as fallback is fine. 
-          But keeping it at bottom might double it. 
-          Let's see: Loading.jsx probably listens to navigation state? 
-          For now, I'll keep the existing <Loading /> at the bottom too, but Suspense is safer. 
-      */}
-      <Loading />
     </div>
   );
 }
