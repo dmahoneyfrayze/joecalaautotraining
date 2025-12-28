@@ -150,6 +150,7 @@ const DealershipGrowth = () => {
                                     style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
                                 />
                             </div>
+                        </div>
                     </FadeIn>
 
                     {/* CTA Section */}
