@@ -117,14 +117,14 @@ const Corporate = () => {
                             </div>
                             <div style={{ flex: '1 1 300px' }}>
                                 <div style={{ color: 'var(--color-accent)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.5rem' }}>Leadership</div>
-                                <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Executive Consulting</h3>
+                                <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Executive & Ownership Consulting</h3>
                                 <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem', opacity: 0.8 }}>
-                                    Your team reflects your leadership. We work directly with Dealer Principals, GMs, and Sales Managers to build better accountability structures and hiring processes.
+                                    Your team reflects your leadership. We work directly with Owners and Principals on **Strategy Alignment**, ensuring your vision is executed daily on the sales floor.
                                 </p>
                                 <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginBottom: '2rem' }}>
-                                    <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> <span>Compensation Plan Review</span></li>
-                                    <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> <span>Recruiting & Onboarding Systems</span></li>
-                                    <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> <span>Culture Turnaround</span></li>
+                                    <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> <span>Ownership Consulting</span></li>
+                                    <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> <span>Sales Manager Moulding</span></li>
+                                    <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> <span>Compensation & Pay Plans</span></li>
                                 </ul>
                                 <Link to="/contact" className="btn-primary">Connect with Joe</Link>
                             </div>

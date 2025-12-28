@@ -84,7 +84,9 @@ const SalesTraining = () => {
                                 "Importance of CRM Excellence",
                                 "AI in Modern Sales",
                                 "The VIP Appointment Strategy",
-                                "Increasing Appointment Show Rates"
+                                "Increasing Appointment Show Rates",
+                                "Lead To Appointment Mastery",
+                                "Automotive BDC Training"
                             ].map((item, i) => (
                                 <div key={i} style={{ padding: '1.5rem', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                     <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: 'var(--color-accent)' }}></div>

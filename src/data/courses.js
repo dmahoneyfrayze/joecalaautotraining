@@ -165,6 +165,25 @@ export const courses = [
         isBundle: false
     },
 
+    {
+        id: 'sales-bdc',
+        title: "Automotive BDC Excellence",
+        lessons: "45 lessons",
+        price: "$97/mo",
+        description: "The ultimate guide for Business Development Centers. Scripts, appointment setting, and relentless follow-up strategies.",
+        category: "Skill Mastery",
+        isBundle: false
+    },
+    {
+        id: 'lead-to-appointment',
+        title: "Increase Lead to Appointment Ratio",
+        lessons: "28 lessons",
+        price: "$97/mo",
+        description: "Stop chasing dead leads. Learn the precise word-tracks and timing to convert internet and phone inquiries into showroom visits.",
+        category: "Skill Mastery",
+        isBundle: false
+    },
+
     // --- BUNDLES ---
     {
         id: 'all-courses-access',
@@ -280,6 +299,15 @@ export const courses = [
     },
 
     // --- LEADERSHIP & MINISTRY ---
+    {
+        id: 'sales-manager-moulding',
+        title: "Sales Manager Moulding",
+        lessons: "55 lessons",
+        price: "$197/mo",
+        description: "Go from 'Desk Manager' to 'Leader'. Learn to desking deals, holding teams accountable, and moulding raw talent into top producers.",
+        category: "Leadership & Ministry",
+        isBundle: false
+    },
     {
         id: 'high-perf-teams',
         title: "Developing High-Performance Teams",
