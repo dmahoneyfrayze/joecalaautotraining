@@ -133,6 +133,63 @@ const Corporate = () => {
                 </div>
             </section>
 
+            {/* Client List */}
+            <section style={{ padding: '80px 0', backgroundColor: 'white', borderTop: '1px solid #f0f0f0' }}>
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                        <span style={{ color: 'var(--color-accent)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '1rem' }}>
+                            Proven Results
+                        </span>
+                        <h2 className="section-title">Trusted By Top Dealer Groups</h2>
+                    </div>
+
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
+                        gap: '1.5rem',
+                        textAlign: 'center'
+                    }}>
+                        {[
+                            "Penske Automotive Group",
+                            "Schumacher Automotive Group",
+                            "Beck Automotive Group",
+                            "Ferman Automotive Group",
+                            "Garlyn Shelton Auto Group",
+                            "Joe Mahan Ford",
+                            "Hibdon Auto Group",
+                            "Lexus of Cherry Hill",
+                            "Performance Toyota",
+                            "Performance Volvo",
+                            "Bannister Automotive Group",
+                            "Land Rover of Englewood",
+                            "Jaguar of Englewood",
+                            "Sky Automall",
+                            "Sansone Jr's Automall",
+                            "Hubert Vester Auto Group",
+                            "Short Redmond Ford",
+                            "Spirit Chrysler Dodge Jeep Ram",
+                            "Williams Automotive Group",
+                            "Toronto Auto Group",
+                            "Nanaimo Chrysler Dodge Jeep Ram",
+                            "Buchanan Auto Park",
+                            "Bill Ryan Dodge Jeep Ram"
+                        ].map((client, index) => (
+                            <div key={index} style={{
+                                padding: '1rem',
+                                backgroundColor: '#f9fafb',
+                                borderRadius: '8px',
+                                color: '#555',
+                                fontWeight: 500,
+                                fontSize: '0.95rem',
+                                border: '1px solid #eee'
+                            }}>
+                                {client}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
             <section style={{ padding: '100px 0', backgroundColor: 'var(--color-primary)', color: 'white', textAlign: 'center' }}>
                 <div className="container">
