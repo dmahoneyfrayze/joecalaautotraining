@@ -169,6 +169,46 @@ const DealershipGrowth = () => {
                         </div>
                     </FadeIn>
 
+                    {/* Pillar 4: Ethical Leadership & Reputation */}
+                    <FadeIn>
+                        <div id="ethics" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem' }}>
+                            <div style={{ order: 1 }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+                                    <div style={{ padding: '1rem', backgroundColor: 'var(--color-accent)', color: '#0F102A', borderRadius: '50%', fontSize: '1.5rem', fontWeight: 700 }}>4</div>
+                                    <h2 style={{ fontSize: '2rem' }}>Ethical Leadership</h2>
+                                </div>
+                                <p style={{ fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
+                                    In a transparent marketplace, your reputation is your currency. The "Old School" tricks don't just kill deals; they kill your brand. Sustainable growth requires a foundation of absolute integrity.
+                                </p>
+                                <ul style={{ marginBottom: '2rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                                    <li style={{ display: 'flex', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> Zero tolerance for "bait-and-switch" tactics.</li>
+                                    <li style={{ display: 'flex', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> Transparent pricing builds trust before the customer arrives.</li>
+                                    <li style={{ display: 'flex', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> Leadership must model servant-based authority.</li>
+                                </ul>
+                                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+                                    <Link to="/corporate" className="btn-secondary" style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>Leadership Training</Link>
+                                    <Link to="/blog/ethics-reputation-management-sales" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'var(--color-primary)', fontWeight: 600 }}>
+                                        <BookOpen size={18} /> The Integrity Gap
+                                    </Link>
+                                </div>
+                            </div>
+                            <div style={{
+                                backgroundColor: '#f9fafb',
+                                padding: '1.5rem',
+                                borderRadius: '20px',
+                                overflow: 'hidden',
+                                order: 0,
+                                boxShadow: '0 10px 30px rgba(0,0,0,0.05)'
+                            }}>
+                                <img
+                                    src="/images/joe-portrait-1.jpg"
+                                    alt="Ethical Leadership with Joe Cala"
+                                    style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+                                />
+                            </div>
+                        </div>
+                    </FadeIn>
+
                     {/* CTA Section */}
                     <div style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '4rem', borderRadius: '24px', textAlign: 'center', marginTop: '4rem' }}>
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Ready to Install This System?</h2>
