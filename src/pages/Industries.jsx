@@ -19,7 +19,7 @@ const Industries = () => {
             title: "Real Estate",
             icon: <Home size={40} />,
             desc: "Move beyond 'showing houses' to 'closing homes'. Learn the art of emotional discovery, negotiation leverage, and building a referral-based fortress.",
-            link: "/academy",
+            link: "/industries/real-estate",
             linkText: "View Real Estate Courses",
             color: "#2ecc71"
         },

@@ -25,6 +25,7 @@ const SalesTraining = lazy(() => import('./pages/pillars/SalesTraining'));
 const DealershipGrowth = lazy(() => import('./pages/pillars/DealershipGrowth'));
 const Corporate = lazy(() => import('./pages/Corporate'));
 const Industries = lazy(() => import('./pages/Industries'));
+const RealEstate = lazy(() => import('./pages/industries/RealEstate'));
 const Powersports = lazy(() => import('./pages/industries/Powersports'));
 const Terms = lazy(() => import('./pages/Terms'));
 
@@ -44,6 +45,7 @@ function App() {
             <Route path="/corporate" element={<Corporate />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/industries/powersports" element={<Powersports />} />
+            <Route path="/industries/real-estate" element={<RealEstate />} />
             <Route path="/academy" element={<Academy />} />
             <Route path="/mentorship" element={<Mentorship />} />
             <Route path="/contact" element={<Contact />} />
