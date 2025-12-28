@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Loading = () => {
     return (
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '50vh', width: '100%' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', width: '100%' }}>
             <div style={{ position: 'relative' }}>
                 <motion.div
                     style={{
