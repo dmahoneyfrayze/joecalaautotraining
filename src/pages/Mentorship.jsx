@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 import Breadcrumbs from '../components/Breadcrumbs';
 import FAQ from '../components/FAQ';
 import VideoTestimonials from '../components/VideoTestimonials';
+import { ProductSchema } from '../components/SchemaMarkup';
 
 const Mentorship = () => {
     const faqItems = [
