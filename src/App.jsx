@@ -24,6 +24,7 @@ const MyrtleBeach = lazy(() => import('./pages/locations/MyrtleBeach'));
 const SalesTraining = lazy(() => import('./pages/pillars/SalesTraining'));
 const DealershipGrowth = lazy(() => import('./pages/pillars/DealershipGrowth'));
 const Corporate = lazy(() => import('./pages/Corporate'));
+const Industries = lazy(() => import('./pages/Industries'));
 const Terms = lazy(() => import('./pages/Terms'));
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/what-we-do" element={<WhatWeDo />} />
             <Route path="/corporate" element={<Corporate />} />
+            <Route path="/industries" element={<Industries />} />
             <Route path="/academy" element={<Academy />} />
             <Route path="/mentorship" element={<Mentorship />} />
             <Route path="/contact" element={<Contact />} />

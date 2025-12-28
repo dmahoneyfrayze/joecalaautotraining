@@ -22,6 +22,7 @@ const Footer = () => {
                         <h3 style={{ marginBottom: '1.5rem', fontSize: '1.2rem' }}>Training & Resources</h3>
                         <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', opacity: 0.8 }}>
                             <li><Link to="/academy">JC Training Academy</Link></li>
+                            <li><Link to="/industries">Industries Served</Link></li>
                             <li><Link to="/mentorship">Sales Mentorship</Link></li>
                             <li><a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer">Student Login</a></li>
                             <li><Link to="/what-we-do">Methodology</Link></li>
