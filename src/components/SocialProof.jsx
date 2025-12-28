@@ -46,34 +46,8 @@ const SocialProof = () => {
                         </span>
                         <h2 className="section-title" style={{ color: 'var(--color-primary)' }}>Results That Speak Louder.</h2>
                         <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.2rem', opacity: 0.8 }}>
-                            From local family-owned dealerships to Fortune 500 enterprise sales teams, our methodology delivers consistent, scalable growth.
+                            From local family-owned dealerships to top-performing automotive groups, our methodology delivers consistent, scalable growth.
                         </p>
-                    </div>
-                </FadeIn>
-
-                {/* Logos Grid */}
-                <FadeIn delay={0.2} style={{ marginBottom: '6rem' }}>
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '4rem',
-                        flexWrap: 'wrap',
-                        opacity: 0.5
-                    }}>
-                        {/* Text-based Logos for Premium Feel */}
-                        {['AutoNation', 'Penske', 'Berkshire Hathaway', 'Group 1', 'Sonic Automotive', 'Lithia'].map((brand, i) => (
-                            <h3 key={i} style={{
-                                fontSize: '1.8rem',
-                                fontFamily: 'var(--font-serif)',
-                                color: '#000',
-                                margin: 0,
-                                filter: 'grayscale(100%)',
-                                cursor: 'default'
-                            }}>
-                                {brand}
-                            </h3>
-                        ))}
                     </div>
                 </FadeIn>
 
