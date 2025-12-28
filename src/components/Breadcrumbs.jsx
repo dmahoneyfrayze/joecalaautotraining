@@ -7,8 +7,33 @@ const Breadcrumbs = () => {
 
     if (pathnames.length === 0) return null;
 
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://josephacala.com/"
+            },
+            ...pathnames.map((value, index) => {
+                const isLast = index === pathnames.length - 1;
+                // Accumulate path segments for the ID/URL
+                const to = `/${pathnames.slice(0, index + 1).join('/')}`;
+                return {
+                    "@type": "ListItem",
+                    "position": index + 2,
+                    "name": value.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+                    "item": `https://josephacala.com${to}`
+                };
+            })
+        ]
+    };
+
     return (
         <nav aria-label="Breadcrumb" className="breadcrumbs" style={{ padding: '2rem 0 1rem' }}>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <div className="container" style={{ position: 'relative', zIndex: 10 }}>
                 <div style={{
                     display: 'inline-flex',
