@@ -71,7 +71,7 @@ const Corporate = () => {
                         {[
                             { title: "High Turnover", desc: "Stop the revolving door. We build cultures where top performers want to stay." },
                             { title: "Inconsistent Process", desc: "Replace 'winging it' with a repeatable, scalable road-to-the-sale." },
-                            { title: "Weak Leadership", desc: "Your managers are your most important asset. We train them to lead, not just desc." }
+                            { title: "Weak Leadership", desc: "Your managers are your most important asset. We train them to lead, not just desk." }
                         ].map((item, i) => (
                             <FadeIn key={i} delay={i * 0.1}>
                                 <div style={{ padding: '2.5rem', borderRadius: '12px', backgroundColor: '#f9f9f9', height: '100%' }}>

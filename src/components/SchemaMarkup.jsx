@@ -98,7 +98,7 @@ export const CourseSchema = ({ course }) => {
     return <SchemaMarkup schema={schema} />;
 };
 
-export const LocalBusinessSchema = ({ name, address, telephone, image }) => {
+export const LocalBusinessSchema = ({ name, address, telephone, image, areaServed }) => {
     const schema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -107,7 +107,8 @@ export const LocalBusinessSchema = ({ name, address, telephone, image }) => {
         "telephone": telephone,
         "address": address,
         "priceRange": "$$$",
-        "url": "https://josephacala.com"
+        "url": "https://josephacala.com",
+        ...(areaServed && { "areaServed": areaServed })
     };
     return <SchemaMarkup schema={schema} />;
 };

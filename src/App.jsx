@@ -22,6 +22,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 const MyrtleBeach = lazy(() => import('./pages/locations/MyrtleBeach'));
 const SalesTraining = lazy(() => import('./pages/pillars/SalesTraining'));
+const DealershipGrowth = lazy(() => import('./pages/pillars/DealershipGrowth'));
 const Corporate = lazy(() => import('./pages/Corporate'));
 const Terms = lazy(() => import('./pages/Terms'));
 
@@ -48,6 +49,7 @@ function App() {
 
             <Route path="/locations/myrtle-beach" element={<MyrtleBeach />} />
             <Route path="/training/automotive-sales" element={<SalesTraining />} />
+            <Route path="/growth/dealership-strategies" element={<DealershipGrowth />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
