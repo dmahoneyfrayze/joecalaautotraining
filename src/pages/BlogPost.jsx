@@ -4,6 +4,7 @@ import { blogPosts } from '../data/blogPosts';
 import SEO from '../components/SEO';
 import { Calendar, User, ArrowLeft, Share2 } from 'lucide-react';
 import Breadcrumbs from '../components/Breadcrumbs';
+import LeadMagnet from '../components/LeadMagnet';
 
 const BlogPost = () => {
     const { slug } = useParams();
@@ -70,6 +71,22 @@ const BlogPost = () => {
                         }}
                         dangerouslySetInnerHTML={{ __html: post.content }}
                     />
+
+                    {post.slug === 'objection-handling-mastery-guide' && (
+                        <div style={{ margin: '4rem 0' }}>
+                            <LeadMagnet
+                                title="Download the Objection Handling Scripts"
+                                badgeText="Exclusive Resource"
+                                description="Why struggle to find the words? Get the exact 50+ scripts Joe Cala uses to close highly skeptical buyers."
+                                benefits={[
+                                    '"I need to think about it" responses',
+                                    '"The price is too high" pivots',
+                                    '"I need to talk to my spouse" isolations'
+                                ]}
+                                buttonText="Get The Scripts"
+                            />
+                        </div>
+                    )}
 
                     <div style={{ margin: '4rem 0', padding: '3rem', backgroundColor: 'var(--color-bg-light)', borderRadius: '12px', border: '1px solid rgba(0,0,0,0.05)', textAlign: 'center' }}>
                         <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>Ready to Master Your Sales Skills?</h3>

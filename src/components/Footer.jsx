@@ -24,6 +24,7 @@ const Footer = () => {
                             <li><Link to="/academy">JC Training Academy</Link></li>
                             <li><Link to="/industries">Industries Served</Link></li>
                             <li><Link to="/mentorship">Sales Mentorship</Link></li>
+                            <li><Link to="/growth/dealership-strategies">Dealership Growth Guide</Link></li>
                             <li><a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer">Student Login</a></li>
                             <li><Link to="/what-we-do">Methodology</Link></li>
                         </ul>
