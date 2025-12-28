@@ -67,7 +67,12 @@ const DealershipGrowth = () => {
                                     <li style={{ display: 'flex', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> Create a clear career path from BDC/Sales to F&I or Management.</li>
                                     <li style={{ display: 'flex', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> Implement "Sales Manager Moulding" to ensure leaders are actually leading.</li>
                                 </ul>
-                                <Link to="/corporate" className="btn-secondary" style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>Fix Your Culture</Link>
+                                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+                                    <Link to="/corporate" className="btn-secondary" style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>Fix Your Culture</Link>
+                                    <Link to="/blog/high-turnover-dealership-culture-fix" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'var(--color-primary)', fontWeight: 600 }}>
+                                        <BookOpen size={18} /> Read the Article
+                                    </Link>
+                                </div>
                             </div>
                             <div style={{
                                 backgroundColor: '#f9fafb',
