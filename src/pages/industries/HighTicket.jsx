@@ -15,6 +15,7 @@ const HighTicket = () => {
                 title="High-Ticket Retail & Tech Sales Training | Joe Cala"
                 description="Specialized sales training for Luxury Retail, Furniture, Jewelry, and Tech. Move from transaction-based clerking to relationship-based closing."
                 keywords="luxury retail sales training, high ticket sales coaching, furniture sales training, jewelry sales training, tech sales coaching"
+                image="/images/success-metrics.webp"
             />
 
             {/* Hero Section */}

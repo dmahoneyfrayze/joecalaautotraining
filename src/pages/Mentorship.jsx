@@ -38,6 +38,7 @@ const Mentorship = () => {
                 title="Sales Mentorship Program & Private Coaching | Joe Cala"
                 description="Join the #1 Sales Mentorship community for just $27/mo. Weekly live coaching calls, objection handling scripts, and accountability partners."
                 keywords="sales mentorship program, private sales coaching, affordable sales training, sales community"
+                image="/images/joe-portrait-1.jpg"
             />
             {/* Mentorship Hero */}
             <section className="mentorship-hero" style={{ backgroundColor: '#0F102A', color: 'white', padding: '180px 0 150px', position: 'relative', overflow: 'hidden' }}>

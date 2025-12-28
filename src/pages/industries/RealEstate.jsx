@@ -15,6 +15,7 @@ const RealEstate = () => {
                 title="Real Estate Sales Training | Close More Homes | Joe Cala"
                 description="Stop just showing houses. Start closing homes. Advanced negotiation and emotional selling mastery for top-producing Realtors and Brokers."
                 keywords="real estate sales training, realtor coaching, real estate negotiation training, joe cala real estate"
+                image="/images/sales-process.webp"
             />
 
             {/* Hero Section */}
