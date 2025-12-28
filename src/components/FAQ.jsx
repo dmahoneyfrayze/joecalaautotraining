@@ -47,8 +47,23 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const FAQ = ({ items, title = "Frequently Asked Questions" }) => {
+    // Inject FAQ Schema
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": items.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer
+            }
+        }))
+    };
+
     return (
         <section className="faq-section" style={{ padding: '80px 0', backgroundColor: 'white' }}>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <div className="container" style={{ maxWidth: '800px' }}>
                 <h2 className="section-title" style={{ marginBottom: '3rem' }}>{title}</h2>
                 <div className="faq-list">

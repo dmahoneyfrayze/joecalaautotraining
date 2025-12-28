@@ -1,13 +1,16 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const SEO = ({ title, description, keywords, canonical }) => {
+const SEO = ({ title, description, keywords, canonical, image }) => {
     const location = useLocation();
 
     useEffect(() => {
         // Update Title
         const fullTitle = `${title} | Joe Cala - Sales Training & Leadership`;
         document.title = fullTitle;
+
+        // Use provided image or fallback to logo
+        const socialImage = image || 'https://josephacala.com/images/logo.png';
 
         // Update Description
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -41,13 +44,13 @@ const SEO = ({ title, description, keywords, canonical }) => {
         const ogTags = [
             { property: 'og:title', content: fullTitle },
             { property: 'og:description', content: description },
-            { property: 'og:image', content: 'https://josephacala.com/images/logo.png' },
+            { property: 'og:image', content: socialImage },
             { property: 'og:url', content: canonical || `${siteUrl}${location.pathname}` },
             { property: 'og:type', content: 'website' },
             { property: 'twitter:card', content: 'summary_large_image' },
             { property: 'twitter:title', content: fullTitle },
             { property: 'twitter:description', content: description },
-            { property: 'twitter:image', content: 'https://josephacala.com/images/logo.png' },
+            { property: 'twitter:image', content: socialImage },
         ];
 
         ogTags.forEach(tag => {
