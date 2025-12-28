@@ -54,11 +54,11 @@ const videos = [
     }
 ];
 
-const VideoTestimonials = () => {
+const VideoTestimonials = ({ style = {} }) => {
     const [selectedVideo, setSelectedVideo] = useState(null);
 
     return (
-        <section className="video-testimonials" style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+        <section className="video-testimonials" style={{ padding: '100px 0', backgroundColor: '#fff', ...style }}>
             <div className="container">
                 <FadeIn style={{ textAlign: 'center', marginBottom: '4rem' }}>
                     <span style={{ color: 'var(--color-accent)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem', display: 'block' }}>

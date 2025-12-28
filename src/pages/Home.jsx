@@ -227,7 +227,7 @@ const Home = () => {
             {/* Featured Mentorship */}
             <section className="featured-mentorship" style={{ padding: '120px 0' }}>
                 <FadeIn className="container">
-                    <div className="glass-dark responsive-padding flex-responsive" style={{ borderRadius: '24px', color: 'white' }}>
+                    <div className="glass-dark responsive-padding flex-responsive" style={{ borderRadius: '24px', color: 'white', padding: '4rem' }}>
                         <div style={{ flex: '1 1 400px' }}>
                             <span style={{ color: 'var(--color-accent)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '1.5rem' }}>Exclusive Program</span>
                             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '2rem' }}>Salesperson Mentorship</h2>

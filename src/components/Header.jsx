@@ -9,23 +9,12 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const root = document.getElementById('root');
-      // Check #root scrollTop first (App Shell mode), fallback to window (Standard mode)
-      const scrollTop = root ? root.scrollTop : window.scrollY;
-      setScrolled(scrollTop > 50);
+      setScrolled(window.scrollY > 50);
     };
 
-    const root = document.getElementById('root');
-    // Attach listener to #root if it exists (App Shell), otherwise window
-    if (root) {
-      root.addEventListener('scroll', handleScroll);
-    }
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      if (root) {
-        root.removeEventListener('scroll', handleScroll);
-      }
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);

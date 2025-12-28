@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/Breadcrumbs';
 import FAQ from '../components/FAQ';
+import VideoTestimonials from '../components/VideoTestimonials';
 
 const Mentorship = () => {
     const faqItems = [
@@ -125,19 +126,8 @@ const Mentorship = () => {
             </section>
 
             {/* Video Testimonials Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f9fafb' }}>
-                <div className="container">
-                    <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '3rem' }}>What Reps Are Saying</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
-                        {[...Array(8)].map((_, i) => (
-                            <div key={i} style={{ aspectRatio: '9/16', backgroundColor: '#ddd', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', cursor: 'pointer' }}>
-                                <img src={`https://images.unsplash.com/photo-${1500000000000 + i}?auto=format&fit=crop&q=80&w=400`} alt="Testimonial Thumbnail" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                                <div style={{ position: 'absolute', width: '50px', height: '50px', backgroundColor: 'rgba(0,0,0,0.6)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>►</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/* Video Testimonials Section */}
+            <VideoTestimonials style={{ backgroundColor: '#f9fafb' }} />
 
             <FAQ items={[
                 { question: "Who is this for?", answer: "New reps who want structure and coaching. Experienced reps who want consistency. Managers who want low‑cost, high‑impact development." },
