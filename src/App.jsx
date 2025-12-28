@@ -19,7 +19,7 @@ const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-const Toronto = lazy(() => import('./pages/locations/Toronto'));
+
 const MyrtleBeach = lazy(() => import('./pages/locations/MyrtleBeach'));
 const SalesTraining = lazy(() => import('./pages/pillars/SalesTraining'));
 const Corporate = lazy(() => import('./pages/Corporate'));
@@ -45,7 +45,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             {/* Location & Pillar Pages */}
-            <Route path="/locations/toronto" element={<Toronto />} />
+
             <Route path="/locations/myrtle-beach" element={<MyrtleBeach />} />
             <Route path="/training/automotive-sales" element={<SalesTraining />} />
             <Route path="/terms" element={<Terms />} />

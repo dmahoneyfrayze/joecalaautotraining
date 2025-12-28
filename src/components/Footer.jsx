@@ -76,7 +76,7 @@ const Footer = () => {
 
                 {/* SEO Hidden Links */}
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem', fontSize: '0.8rem', opacity: 0.3 }}>
-                    <Link to="/locations/toronto" style={{ color: 'inherit' }}>Sales Training Toronto</Link> |
+
                     <Link to="/locations/myrtle-beach" style={{ color: 'inherit' }}>Leadership Myrtle Beach</Link> |
                     <Link to="/training/automotive-sales" style={{ color: 'inherit' }}>National Sales Systems</Link>
                 </div>
