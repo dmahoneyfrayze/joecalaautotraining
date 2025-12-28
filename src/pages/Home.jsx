@@ -172,9 +172,9 @@ const Home = () => {
                 <FadeIn className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', textAlign: 'center' }}>
                         {[
-                            { value: "1,000+", label: "Students Trained" },
-                            { value: "500+", label: "Dealerships Impacted" },
-                            { value: "15+", label: "Years Experience" },
+                            { value: "7,300+", label: "Students Trained" },
+                            { value: "470+", label: "Dealerships Impacted" },
+                            { value: "25+", label: "Years Experience" },
                             { value: "100%", label: "Commitment" }
                         ].map((stat, index) => (
                             <motion.div

@@ -30,13 +30,13 @@ const About = () => {
                             </motion.span>
                             <h1 style={{ fontSize: '3.5rem', marginBottom: '2rem', color: 'white' }}>About Joe Cala</h1>
                             <p style={{ fontSize: '1.2rem', lineHeight: '1.8', marginBottom: '1.5rem', opacity: 0.9, color: 'rgba(255, 255, 255, 0.9)' }}>
-                                With over a decade of experience in automotive sales leadership and professional ministry, Joseph Acala brings a unique, purpose-driven perspective to the world of consulting and training.
+                                With over <strong>25 years</strong> of experience in automotive sales leadership and professional ministry, Joseph Acala brings a unique, purpose-driven perspective to the world of consulting and training.
                             </p>
                             <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', opacity: 0.8, color: 'rgba(255, 255, 255, 0.8)' }}>
                                 Joe's authority in the industry was solidified during his time at <strong>Auto Dealer University</strong>, where he developed many of the training protocols still in use across North America today.
                             </p>
                             <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', opacity: 0.8, color: 'rgba(255, 255, 255, 0.8)' }}>
-                                He has worked with over 500 dealerships and mentored more than 1,000 individuals across the <strong>United States and Canada</strong>, helping them bridge the gap between financial success and personal fulfillment.
+                                He has worked with over <strong>470 dealerships</strong> and mentored more than <strong>7,300 individuals</strong> across the <strong>United States and Canada</strong>, helping them bridge the gap between financial success and personal fulfillment.
                             </p>
                         </div>
                         <div style={{ flex: '1 1 400px', position: 'relative' }}>
