@@ -17,6 +17,7 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const Academy = lazy(() => import('./pages/Academy'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 const Toronto = lazy(() => import('./pages/locations/Toronto'));
 const MyrtleBeach = lazy(() => import('./pages/locations/MyrtleBeach'));
@@ -49,6 +50,7 @@ function App() {
             <Route path="/training/automotive-sales" element={<SalesTraining />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </Suspense>
