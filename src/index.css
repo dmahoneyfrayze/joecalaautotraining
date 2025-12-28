@@ -36,6 +36,8 @@
 html {
   height: 100%;
   overscroll-behavior: none;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
@@ -45,6 +47,8 @@ body {
   color: var(--color-text-dark);
   line-height: 1.6;
   overscroll-behavior: none;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 #root {
