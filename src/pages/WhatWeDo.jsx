@@ -128,7 +128,7 @@ const WhatWeDo = () => {
                             <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem', color: '#0F102A', fontWeight: '800' }}>Frayze.ca</h3>
                             <div style={{ color: '#764ba2', fontWeight: '700', marginBottom: '1.5rem', textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '2px' }}>The Growth Engine</div>
                             <p style={{ marginBottom: '2rem', opacity: 0.8, lineHeight: '1.7' }}>
-                                The "No Lead Left Behind" communication layer. Unifies SMS, Social, and Email into one inbox with <strong style={{ color: '#764ba2' }}>Missed Call Text Back</strong> automation.
+                                We keep your dealership <strong>up to date</strong> on the latest CRMs, tracking, activity monitoring, performance metrics, and pay plans. Frayze ensures no lead is left behind.
                             </p>
                             <a href="https://frayze.ca" target="_blank" rel="noopener noreferrer" style={{ marginTop: 'auto', display: 'inline-block', padding: '0.8rem 2rem', borderRadius: '50px', backgroundColor: '#f5f7fa', color: '#764ba2', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem', transition: 'all 0.2s' }}>Explore Frayze &rarr;</a>
                         </div>

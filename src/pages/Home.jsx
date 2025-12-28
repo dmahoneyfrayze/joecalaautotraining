@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import FadeIn from '../components/FadeIn';
 
+import TrustStrip from '../components/TrustStrip';
+
 // Lazy load heavy components below the fold
 const SocialProof = lazy(() => import('../components/SocialProof'));
 const LeadMagnet = lazy(() => import('../components/LeadMagnet'));
@@ -23,12 +25,12 @@ const Home = () => {
                 keywords="sales training, high ticket sales, automotive sales training, real estate sales coaching, tech sales training, Joe Cala"
             />
             {/* Hero Section */}
-            <section className="hero" style={{ minHeight: '90vh', display: 'flex', alignItems: 'center', backgroundColor: 'var(--color-primary)', color: 'white', position: 'relative', overflow: 'hidden', paddingBottom: '150px' }}>
+            <section className="hero" style={{ minHeight: '95vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: 'var(--color-primary)', color: 'white', position: 'relative', overflow: 'hidden', paddingBottom: '150px' }}>
                 {/* Background Decorative Elements */}
                 <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '600px', height: '600px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)', filter: 'blur(40px)' }}></div>
                 <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '400px', height: '400px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%)', filter: 'blur(40px)' }}></div>
 
-                <div className="container" style={{ zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '4rem' }}>
+                <div className="container" style={{ zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '4rem', marginTop: 'auto', marginBottom: 'auto', padding: '120px 2rem 60px' }}>
                     <div style={{ flex: '1 1 500px' }}>
                         <motion.span
                             initial={{ x: -20, opacity: 0 }}
@@ -42,18 +44,28 @@ const Home = () => {
                             initial={{ y: 30, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.2, duration: 0.8 }}
-                            style={{ fontSize: 'clamp(3rem, 6vw, 5rem)', marginBottom: '2rem', lineHeight: 1.1 }}
+                            style={{ fontSize: 'clamp(3rem, 6vw, 5rem)', marginBottom: '1rem', lineHeight: 1.1 }}
                         >
                             Lead With Purpose. <br />
                             <span className="text-gradient-gold">Live With Clarity.</span>
                         </motion.h1>
+
+                        <motion.h2
+                            initial={{ y: 30, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.3, duration: 0.8 }}
+                            style={{ fontSize: '1.5rem', fontWeight: 500, fontStyle: 'italic', marginBottom: '2rem', opacity: 0.9, fontFamily: 'var(--font-serif)' }}
+                        >
+                            "Inspire Results, Not Discipline."
+                        </motion.h2>
+
                         <motion.p
                             initial={{ y: 30, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.4, duration: 0.8 }}
                             style={{ fontSize: '1.25rem', marginBottom: '3rem', maxWidth: '600px', opacity: 0.9, lineHeight: 1.6 }}
                         >
-                            Transform your dealership's performance and your personal trajectory with elite sales training across the <strong>United States and Canada</strong>.
+                            Transform your dealership's performance with elite sales training, <strong>weekly group seminars</strong>, and access to <strong>hundreds of assets & playbooks</strong>.
                         </motion.p>
                         <motion.div
                             initial={{ y: 30, opacity: 0 }}
@@ -99,8 +111,11 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Trust Icons Strip */}
+            <TrustStrip />
+
             {/* Choose Your Path Section */}
-            <section style={{ padding: '40px 0 80px', marginTop: '-60px', position: 'relative', zIndex: 10 }}>
+            <section style={{ padding: '40px 0 80px', position: 'relative', zIndex: 10 }}>
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                         {/* Individuals Card */}

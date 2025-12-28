@@ -90,7 +90,7 @@ const Academy = () => {
                             transition={{ delay: 0.3 }}
                             style={{ fontSize: '1.25rem', marginBottom: '3rem', opacity: 0.9, lineHeight: 1.6 }}
                         >
-                            The Gold Standard for North American Sales & Leadership Training. Over 30+ specialized courses and thousands of lessons to master your craft.
+                            The Gold Standard for North American Sales & Leadership Training. Access <strong>hundreds of online videos, assets, playbooks, guides, and takeaways</strong> to master your craft.
                         </motion.p>
 
                         <motion.div
