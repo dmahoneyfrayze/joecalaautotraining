@@ -33,37 +33,19 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow: hidden;
-  /* Prevent native window scroll to stop script thrashing */
-  height: 100%;
-}
+/* html { } - Removed custom scroll lock */
 
 body {
   font-family: var(--font-sans);
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   line-height: 1.6;
-  height: 100%;
-  overflow: hidden;
-  /* Lock body */
-  position: relative;
-  overscroll-behavior: none;
-  /* Prevent rubber-banding */
 }
 
 #root {
-  height: 100%;
-  overflow-y: auto;
-  /* Move scrollbar here - The App Shell Pattern */
-  overflow-x: hidden;
+  min-height: 100vh;
   display: flex;
-  /* Keep flex for layout if needed, or block */
   flex-direction: column;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE/Edge */
 }
 
 h1,
@@ -192,22 +174,7 @@ section {
   animation: fadeIn 0.8s ease forwards;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  display: none;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-bg-light);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent);
-}
+/* Custom Scrollbar styles removed for standard scrolling */
 
 /* Premium Utilities */
 .text-gradient {
