@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/Breadcrumbs';
+import VideoTestimonials from '../components/VideoTestimonials';
 
 const About = () => {
     return (
@@ -78,6 +79,8 @@ const About = () => {
                     </div>
                 </div>
             </section>
+
+            <VideoTestimonials />
 
             <section className="story" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'white', padding: '100px 0' }}>
                 <div className="container">
