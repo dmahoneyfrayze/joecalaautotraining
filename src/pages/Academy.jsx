@@ -4,6 +4,7 @@ import { BookOpen, Award, Globe, CheckCircle, ArrowRight, Zap, Target, Users, Bo
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/Breadcrumbs';
+import { CourseSchema } from '../components/SchemaMarkup';
 import FAQ from '../components/FAQ';
 import { courses } from '../data/courses';
 
