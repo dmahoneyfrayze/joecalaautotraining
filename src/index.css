@@ -217,6 +217,15 @@ section {
   animation: gradientShift 15s ease infinite;
 }
 
+@media (max-width: 768px) {
+  .animated-gradient {
+    animation: none;
+    background-size: 100% 100%;
+    background: #1A1B41;
+    /* Fallback to solid color for performance */
+  }
+}
+
 .shimmer-effect {
   position: relative;
   overflow: hidden;

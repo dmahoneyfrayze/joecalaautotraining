@@ -36,45 +36,30 @@ const Home = () => {
 
                 <div className="container" style={{ zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '4rem', marginTop: 'auto', marginBottom: 'auto', padding: '120px 2rem 60px' }}>
                     <div style={{ flex: '1 1 500px' }}>
-                        <motion.span
-                            initial={{ x: -20, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.6 }}
+                        <span
                             style={{ color: 'var(--color-accent)', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '1.5rem', display: 'block' }}
                         >
                             Excellence Through Purpose
-                        </motion.span>
-                        <motion.h1
-                            initial={{ y: 30, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.2, duration: 0.8 }}
+                        </span>
+                        <h1
                             style={{ fontSize: 'clamp(3rem, 6vw, 5rem)', marginBottom: '1rem', lineHeight: 1.1 }}
                         >
                             Lead With Purpose. <br />
                             <span className="text-gradient-gold">Live With Clarity.</span>
-                        </motion.h1>
+                        </h1>
 
-                        <motion.h2
-                            initial={{ y: 30, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.3, duration: 0.8 }}
+                        <h2
                             style={{ fontSize: '1.5rem', fontWeight: 500, fontStyle: 'italic', marginBottom: '2rem', opacity: 0.9, fontFamily: 'var(--font-serif)' }}
                         >
                             "Inspire Results, Not Discipline."
-                        </motion.h2>
+                        </h2>
 
-                        <motion.p
-                            initial={{ y: 30, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.4, duration: 0.8 }}
+                        <p
                             style={{ fontSize: '1.25rem', marginBottom: '3rem', maxWidth: '600px', opacity: 0.9, lineHeight: 1.6 }}
                         >
                             Transform your dealership's performance with elite sales training, <strong>weekly group seminars</strong>, and access to <strong>hundreds of assets & playbooks</strong>.
-                        </motion.p>
-                        <motion.div
-                            initial={{ y: 30, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.6, duration: 0.8 }}
+                        </p>
+                        <div
                             style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}
                         >
                             <Link to="/mentorship" className="btn-primary" aria-label="Start Your Mentorship Journey" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
@@ -83,13 +68,10 @@ const Home = () => {
                             <Link to="/what-we-do" className="btn-secondary" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
                                 Our Approach
                             </Link>
-                        </motion.div>
+                        </div>
                     </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1, ease: "easeOut" }}
+                    <div
                         style={{ flex: '0 1 450px', position: 'relative' }}
                     >
                         <img
@@ -104,7 +86,7 @@ const Home = () => {
                             <div style={{ color: 'var(--color-accent)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.2rem' }}>Trusted Authority</div>
                             <div style={{ fontSize: '1.5rem' }}>25+ Years Experience</div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
 
                 {/* Wave Separator */}
