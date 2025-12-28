@@ -29,7 +29,7 @@ const Home = () => {
                 image="/images/joe-portrait-1.jpg"
             />
             {/* Hero Section */}
-            <section className="hero" style={{ minHeight: '95vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: 'var(--color-primary)', color: 'white', position: 'relative', overflow: 'hidden', paddingBottom: '150px' }}>
+            <section className="hero animated-gradient" style={{ minHeight: '95vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', color: 'white', position: 'relative', overflow: 'hidden', paddingBottom: '150px' }}>
                 {/* Background Decorative Elements */}
                 <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '600px', height: '600px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)', filter: 'blur(40px)' }}></div>
                 <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '400px', height: '400px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%)', filter: 'blur(40px)' }}></div>
