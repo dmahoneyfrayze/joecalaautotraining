@@ -35,8 +35,8 @@ const Industries = () => {
             title: "High-Ticket Retail",
             icon: <ShoppingBag size={40} />,
             desc: "Whether it's furniture, jewelry, or technology, the psychology of the consultative close remains the same. Stop clerking and start closing.",
-            link: "/mentorship",
-            linkText: "Join Sales Mentorship",
+            link: "/industries/high-ticket",
+            linkText: "View Retail Solutions",
             color: "#9b59b6"
         }
     ];

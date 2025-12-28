@@ -27,6 +27,7 @@ const Corporate = lazy(() => import('./pages/Corporate'));
 const Industries = lazy(() => import('./pages/Industries'));
 const RealEstate = lazy(() => import('./pages/industries/RealEstate'));
 const Powersports = lazy(() => import('./pages/industries/Powersports'));
+const HighTicket = lazy(() => import('./pages/industries/HighTicket'));
 const Terms = lazy(() => import('./pages/Terms'));
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
             <Route path="/industries" element={<Industries />} />
             <Route path="/industries/powersports" element={<Powersports />} />
             <Route path="/industries/real-estate" element={<RealEstate />} />
+            <Route path="/industries/high-ticket" element={<HighTicket />} />
             <Route path="/academy" element={<Academy />} />
             <Route path="/mentorship" element={<Mentorship />} />
             <Route path="/contact" element={<Contact />} />
