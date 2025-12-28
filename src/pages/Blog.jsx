@@ -14,6 +14,7 @@ const Blog = () => {
             <SEO
                 title="Blog - Sales Insights & Leadership | Joe Cala"
                 description="Daily insights on automotive sales tactics, faith-based leadership, and high-performance mindset."
+                image="/images/joe-portrait-1.jpg"
             />
 
             <section className="blog-hero" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'white', padding: '160px 0 80px' }}>

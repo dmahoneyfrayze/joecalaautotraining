@@ -37,6 +37,7 @@ const WhatWeDo = () => {
                 title="Our Methodology | JC Training & Development"
                 description="Explore the 4 Pillars of Total Transformation: Faith, Training, Motivation, and Coaching. The framework behind the JC Growth Circle."
                 keywords="sales methodology, JC Growth Circle, faith based leadership, sales pillars, motivational coaching"
+                image="/images/growth-circle.jpg"
             />
             <section className="page-hero" style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '160px 0 100px', textAlign: 'center' }}>
                 <div className="container">

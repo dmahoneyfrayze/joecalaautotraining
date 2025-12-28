@@ -51,6 +51,7 @@ const Industries = () => {
                 title="Sales Training by Industry | Automotive, Real Estate, Marine | Joe Cala"
                 description="Joe Cala's high-performance sales training tailored for Automotive, Real Estate, RV/Marine, and High-Ticket Retail sectors. Universal principles, specific applications."
                 keywords="automotive sales training, real estate sales coaching, rv sales training, marine sales training, high ticket sales"
+                image="/images/joe-portrait-2.jpg"
             />
 
             {/* Hero Section */}

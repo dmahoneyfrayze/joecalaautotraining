@@ -15,6 +15,7 @@ const SalesTraining = () => {
                 title="National Automotive Sales Training Systems | Joe Cala"
                 description="Install a proven sales operating system. From 'Lead to Appointment' to 'Closing Mastery', we fix the broken processes in your dealership."
                 keywords="automotive sales training system, car dealership sales process, BDC training, sales management system"
+                image="/images/sales-process.jpg"
             />
 
             <section style={{ backgroundColor: '#0F102A', color: 'white', padding: '160px 0 100px', textAlign: 'center' }}>

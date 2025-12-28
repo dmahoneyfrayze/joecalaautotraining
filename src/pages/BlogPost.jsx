@@ -23,6 +23,7 @@ const BlogPost = () => {
             <SEO
                 title={`${post.title} | Joe Cala`}
                 description={post.excerpt}
+                image={post.image}
             />
 
             <div className="blog-post-hero" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'white', padding: '160px 0 80px' }}>
