@@ -159,8 +159,11 @@ const WhatWeDo = () => {
                     </div>
                     <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
                         <img
-                            src="/images/sales-process.png"
+                            src="/images/sales-process.jpg"
                             alt="Automotive Sales Operating System"
+                            width="1000"
+                            height="600"
+                            loading="lazy"
                             style={{ width: '100%', height: 'auto', borderRadius: '15px', boxShadow: '0 20px 50px rgba(0,0,0,0.05)' }}
                         />
                     </div>

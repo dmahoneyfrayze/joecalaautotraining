@@ -11,6 +11,8 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://beta.leadconnectorhq.com">
+  <link rel="dns-prefetch" href="https://api.frayze.ca">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
@@ -32,10 +34,19 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
-  <!-- LeadConnector Chat -->
-  <script defer src="https://beta.leadconnectorhq.com/loader.js"
-    data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
-    data-widget-id="684e554745cfdb687717ec28"></script>
+  <!-- LeadConnector Chat (Deferred) -->
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var script = document.createElement('script');
+        script.src = "https://beta.leadconnectorhq.com/loader.js";
+        script.defer = true;
+        script.setAttribute('data-resources-url', "https://beta.leadconnectorhq.com/chat-widget/loader.js");
+        script.setAttribute('data-widget-id', "684e554745cfdb687717ec28");
+        document.body.appendChild(script);
+      }, 4000); // 4 second delay to prioritize LCP/TTI
+    });
+  </script>
 </body>
 
 </html>
