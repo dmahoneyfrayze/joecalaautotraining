@@ -16,8 +16,8 @@ const Contact = () => {
             />
             <section className="contact-hero" style={{ padding: '160px 0 60px', backgroundColor: 'var(--color-primary)', color: 'white', textAlign: 'center' }}>
                 <div className="container">
-                    <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>Get In Touch</h1>
-                    <p style={{ opacity: 0.8, fontSize: '1.2rem' }}>Ready to transform your dealership or career? Let's start the conversation.</p>
+                    <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>Book Your Strategy Call</h1>
+                    <p style={{ opacity: 0.8, fontSize: '1.2rem' }}>Ready to scale your sales floor? Schedule a direct consultation with our team.</p>
                 </div>
             </section>
 

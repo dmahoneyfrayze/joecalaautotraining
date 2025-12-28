@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Loading from './components/Loading';
 import FadeIn from './components/FadeIn';
+import StickyMobileCTA from './components/StickyMobileCTA';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
@@ -65,6 +66,9 @@ function App() {
         </AnimatePresence>
       </Suspense>
       <Footer />
+      <div className="mobile-only-visible">
+        <StickyMobileCTA />
+      </div>
     </div>
   );
 }

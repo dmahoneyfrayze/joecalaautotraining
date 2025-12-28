@@ -62,11 +62,11 @@ const Home = () => {
                         <div
                             style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}
                         >
-                            <Link to="/mentorship" className="btn-primary" aria-label="Start Your Mentorship Journey" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
-                                Start Your Journey <ArrowRight size={20} />
+                            <Link to="/mentorship" className="btn-primary" aria-label="Join Sales Mentorship" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
+                                Join Mentorship <ArrowRight size={20} />
                             </Link>
-                            <Link to="/what-we-do" className="btn-secondary" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
-                                Our Approach
+                            <Link to="/corporate" className="btn-secondary" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
+                                Corporate Solutions
                             </Link>
                         </div>
                     </div>
