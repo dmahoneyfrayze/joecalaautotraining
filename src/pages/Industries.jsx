@@ -24,11 +24,11 @@ const Industries = () => {
             color: "#2ecc71"
         },
         {
-            title: "RV & Marine",
+            title: "Powersports, RV & Marine",
             icon: <Anchor size={40} />,
             desc: "High-ticket leisure sales require a different pace. Learn to sell the 'lifestyle' and handle the unique objections of the luxury recreation buyer.",
-            link: "/contact",
-            linkText: "Book a Workshop",
+            link: "/industries/powersports",
+            linkText: "View Powersports Training",
             color: "#3498db"
         },
         {
