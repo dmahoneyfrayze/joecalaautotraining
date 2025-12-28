@@ -84,6 +84,9 @@ const DealershipGrowth = () => {
                                 <img
                                     src="/images/team-collaboration.webp"
                                     alt="Team Collaboration and Culture"
+                                    width="600"
+                                    height="400"
+                                    loading="lazy"
                                     style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
                                 />
                             </div>
@@ -124,6 +127,9 @@ const DealershipGrowth = () => {
                                 <img
                                     src="/images/sales-process.webp"
                                     alt="Automotive Sales Process"
+                                    width="600"
+                                    height="400"
+                                    loading="lazy"
                                     style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
                                 />
                             </div>
@@ -163,6 +169,9 @@ const DealershipGrowth = () => {
                                 <img
                                     src="/images/crm-planning.webp"
                                     alt="CRM Planning and Lead Management"
+                                    width="600"
+                                    height="400"
+                                    loading="lazy"
                                     style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
                                 />
                             </div>
@@ -203,6 +212,9 @@ const DealershipGrowth = () => {
                                 <img
                                     src="/images/joe-portrait-1.jpg"
                                     alt="Ethical Leadership with Joe Cala"
+                                    width="600"
+                                    height="400"
+                                    loading="lazy"
                                     style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
                                 />
                             </div>
