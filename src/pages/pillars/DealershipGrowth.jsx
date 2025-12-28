@@ -15,7 +15,8 @@ const DealershipGrowth = () => {
             <SEO
                 title="Automotive Dealership Growth Strategies 2025 | Joe Cala"
                 description="A comprehensive guide to scaling your car dealership. Learn how to fix broken sales processes, reduce turnover, and increase gross profit per unit."
-                keywords="automotive dealership growth, car sales strategies, increase dealership gross, reduce sales turnover, dealership management training"
+                keywords="dealership growth strategies, automotive sales management, showroom traffic, F&I profit, bdc training"
+                image="/images/sales-process.webp"
             />
 
             {/* Pillar Hero */}

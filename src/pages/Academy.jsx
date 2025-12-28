@@ -61,6 +61,7 @@ const Academy = () => {
                 title="Online Automotive Sales Training & Certification | JC Academy"
                 description="Access the #1 digital library for automotive sales professionals. Modules on CRM, BDC, Closing, and Leadership. Get certified and advance your career today."
                 keywords="online car sales training, automotive sales certification, BDC training course, sales management course"
+                image="/images/group-training.webp"
             />
             {/* Academy Hero */}
             <section className="academy-hero" style={{ backgroundColor: '#0A0B1A', color: 'white', padding: '180px 0 150px', position: 'relative', overflow: 'hidden' }}>

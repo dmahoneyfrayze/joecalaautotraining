@@ -9,8 +9,12 @@ const SEO = ({ title, description, keywords, canonical, image }) => {
         const fullTitle = `${title} | Joe Cala - Sales Training & Leadership`;
         document.title = fullTitle;
 
-        // Use provided image or fallback to logo
-        const socialImage = image || 'https://josephacala.com/images/logo.png';
+        // Use provided image or fallback to logo. Handle relative paths.
+        let imagePath = image || '/images/logo.png';
+        if (imagePath.startsWith('/')) {
+            imagePath = `https://josephacala.com${imagePath}`;
+        }
+        const socialImage = imagePath;
 
         // Update Description
         let metaDescription = document.querySelector('meta[name="description"]');

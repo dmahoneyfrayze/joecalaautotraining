@@ -16,6 +16,7 @@ const Powersports = () => {
                 title="Powersports & Motorcycle Dealership Sales Training | Joe Cala"
                 description="Specialized sales training for Harley-Davidson, Metric, and RV dealerships. Learn to master lifestyle selling, seasonal floor traffic, and accessory revenue."
                 keywords="motorcycle sales training, powersports dealership consulting, harley davidson sales training, rv sales process, marine sales coaching"
+                image="/images/group-training.webp"
             />
 
             {/* Hero Section */}

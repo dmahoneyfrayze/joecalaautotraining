@@ -16,6 +16,7 @@ const Corporate = () => {
                 title="Automotive Dealership Sales Training & Consulting | Joe Cala"
                 description="Transform your dealership's culture and gross profit. Joe Cala provides on-site workshops, executive strategy consulting, and 'Sales Manager Moulding' for top dealer groups."
                 keywords="dealership sales training, automotive consulting, sales manager training, showroom process, sales culture transformation"
+                image="/images/sales-workshop.webp"
             />
 
             {/* Hero Section */}

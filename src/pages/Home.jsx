@@ -26,6 +26,7 @@ const Home = () => {
                 title="High-Ticket Sales Training & Leadership Coaching | Joe Cala"
                 description="Master the art of ethical influence with Joe Cala. Elite sales training for Automotive, Real Estate, and Tech professionals. Data-driven results, faith-based leadership."
                 keywords="high ticket sales training, automotive sales coaching, ethical sales training, leadership development, Joe Cala"
+                image="/images/joe-portrait-1.jpg"
             />
             {/* Hero Section */}
             <section className="hero" style={{ minHeight: '95vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: 'var(--color-primary)', color: 'white', position: 'relative', overflow: 'hidden', paddingBottom: '150px' }}>
