@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import ReviewWidget from '../components/ReviewWidget';
 
 const Contact = () => {
     return (
@@ -57,6 +58,8 @@ const Contact = () => {
                                 <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem', opacity: 0.8 }}>Prefer a scheduled call? Use our booking calendar to find a time that works for you.</p>
                                 <a href="#" className="btn-secondary" style={{ display: 'inline-block', textAlign: 'center' }}>Schedule Discovery Call</a>
                             </div>
+
+                            <ReviewWidget />
                         </div>
 
                         {/* Contact Form */}

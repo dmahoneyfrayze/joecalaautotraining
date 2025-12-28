@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 import FadeIn from './FadeIn';
+import ReviewWidget from './ReviewWidget';
 
 const testimonials = [
     {
@@ -139,6 +140,16 @@ const SocialProof = () => {
                             </motion.div>
                         </FadeIn>
                     ))}
+                </div>
+
+                <div style={{ marginTop: '5rem', paddingTop: '3rem', borderTop: '1px solid #eaeaea' }}>
+                    <FadeIn direction="up">
+                        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                            <h3 style={{ fontSize: '1.8rem', color: 'var(--color-primary)' }}>Verified Reviews</h3>
+                            <p style={{ opacity: 0.7 }}>Recent feedback from our clients across the web.</p>
+                        </div>
+                        <ReviewWidget />
+                    </FadeIn>
                 </div>
             </div>
         </section>
