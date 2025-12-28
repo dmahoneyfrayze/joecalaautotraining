@@ -51,10 +51,15 @@ const Academy = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            {/* Generate Schema for top courses */}
+            {courses.slice(0, 5).map(course => (
+                <CourseSchema key={course.id} course={course} />
+            ))}
+
             <SEO
-                title="JC Training Academy | Elite Auto Sales Training"
-                description="Access professional automotive and general sales training portals. Built by Joe Cala, formerly of Auto Dealer University. Scale your success in the US and Canada."
-                keywords="sales training academy, car sales portal, dealership training Canada, US auto sales coaching, Thinkific sales course"
+                title="Online Automotive Sales Training & Certification | JC Academy"
+                description="Access the #1 digital library for automotive sales professionals. Modules on CRM, BDC, Closing, and Leadership. Get certified and advance your career today."
+                keywords="online car sales training, automotive sales certification, BDC training course, sales management course"
             />
             {/* Academy Hero */}
             <section className="academy-hero" style={{ backgroundColor: '#0A0B1A', color: 'white', padding: '180px 0 150px', position: 'relative', overflow: 'hidden' }}>

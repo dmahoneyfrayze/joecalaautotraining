@@ -13,8 +13,8 @@ const SalesTraining = () => {
         >
             <SEO
                 title="National Automotive Sales Training Systems | Joe Cala"
-                description="Comprehensive sales training systems for dealerships across the USA. Proven methodologies used by tons of dealers to increase gross profit and retention."
-                keywords="national automotive sales training, dealership training USA, remote sales coaching, car sales curriculum"
+                description="Install a proven sales operating system. From 'Lead to Appointment' to 'Closing Mastery', we fix the broken processes in your dealership."
+                keywords="automotive sales training system, car dealership sales process, BDC training, sales management system"
             />
 
             <section style={{ backgroundColor: '#0F102A', color: 'white', padding: '160px 0 100px', textAlign: 'center' }}>

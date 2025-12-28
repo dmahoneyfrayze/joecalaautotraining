@@ -4,6 +4,7 @@ import { ArrowRight, Star, Users, Briefcase, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import FadeIn from '../components/FadeIn';
+import { OrganizationSchema, PersonSchema } from '../components/SchemaMarkup';
 
 import TrustStrip from '../components/TrustStrip';
 
@@ -19,10 +20,12 @@ const Home = () => {
             exit={{ opacity: 0 }}
             className="home"
         >
+            <OrganizationSchema />
+            <PersonSchema />
             <SEO
-                title="The Authority in High-Ticket Sales Training | Joe Cala"
-                description="Elite sales training & leadership coaching for Automotive, Real Estate, Tech, and Luxury Retail. Master the art of influence with Joe Cala."
-                keywords="sales training, high ticket sales, automotive sales training, real estate sales coaching, tech sales training, Joe Cala"
+                title="High-Ticket Sales Training & Leadership Coaching | Joe Cala"
+                description="Master the art of ethical influence with Joe Cala. Elite sales training for Automotive, Real Estate, and Tech professionals. Data-driven results, faith-based leadership."
+                keywords="high ticket sales training, automotive sales coaching, ethical sales training, leadership development, Joe Cala"
             />
             {/* Hero Section */}
             <section className="hero" style={{ minHeight: '95vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: 'var(--color-primary)', color: 'white', position: 'relative', overflow: 'hidden', paddingBottom: '150px' }}>

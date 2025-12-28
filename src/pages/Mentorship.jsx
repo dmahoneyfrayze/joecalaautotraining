@@ -22,25 +22,21 @@ const Mentorship = () => {
         }
     ];
 
-    const benefits = [
-        "Weekly LIVE Training Sessions",
-        "Access to Private Community",
-        "Sales Script Library",
-        "Overcoming Objections Workshop",
-        "Daily Accountability Tracking",
-        "Faith-Based Leadership Principles"
-    ];
-
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <ProductSchema
+                name="Joe Cala Sales Mentorship Program"
+                description="Weekly live sales coaching, private community access, and script library for high-ticket sales professionals."
+                price="27.00"
+            />
             <SEO
-                title="Sales Mentorship & Coaching | Joe Cala"
-                description="Join an elite group of sales professionals. Weekly coaching, private scripts, and accountability to transform your career. Perfect for US and Canada dealership teams."
-                keywords="sales mentorship, car sales coaching, dealership leadership, Joe Cala mentorship, automotive sales success"
+                title="Sales Mentorship Program & Private Coaching | Joe Cala"
+                description="Join the #1 Sales Mentorship community for just $27/mo. Weekly live coaching calls, objection handling scripts, and accountability partners."
+                keywords="sales mentorship program, private sales coaching, affordable sales training, sales community"
             />
             {/* Mentorship Hero */}
             <section className="mentorship-hero" style={{ backgroundColor: '#0F102A', color: 'white', padding: '180px 0 150px', position: 'relative', overflow: 'hidden' }}>
@@ -126,7 +122,6 @@ const Mentorship = () => {
             </section>
 
             {/* Video Testimonials Section */}
-            {/* Video Testimonials Section */}
             <VideoTestimonials style={{ backgroundColor: '#f9fafb' }} />
 
             <FAQ items={[
@@ -144,7 +139,7 @@ const Mentorship = () => {
                     <a href="https://jctrainingacademy.thinkific.com/users/sign_up" target="_blank" rel="noopener noreferrer" className="btn-primary">Start My Free 30 Days</a>
                 </div>
             </section>
-        </motion.div>
+        </motion.div >
     );
 };
 

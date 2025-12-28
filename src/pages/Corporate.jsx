@@ -13,9 +13,9 @@ const Corporate = () => {
             exit={{ opacity: 0 }}
         >
             <SEO
-                title="Corporate Sales Training & Dealership Consulting | Joe Cala"
-                description="Scale your dealership's performance with Joe Cala's corporate training programs. On-site workshops, executive consulting, and team turnarounds."
-                keywords="corporate sales training, dealership consulting, automotive sales workshops, sales team training, Joe Cala corporate"
+                title="Automotive Dealership Sales Training & Consulting | Joe Cala"
+                description="Transform your dealership's culture and gross profit. Joe Cala provides on-site workshops, executive strategy consulting, and 'Sales Manager Moulding' for top dealer groups."
+                keywords="dealership sales training, automotive consulting, sales manager training, showroom process, sales culture transformation"
             />
 
             {/* Hero Section */}

@@ -3,6 +3,7 @@ import { MapPin, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import Breadcrumbs from '../../components/Breadcrumbs';
+import { LocalBusinessSchema } from '../../components/SchemaMarkup';
 
 const Toronto = () => {
     return (
@@ -11,10 +12,22 @@ const Toronto = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <LocalBusinessSchema
+                name="JC Training & Development - Canada"
+                address={{
+                    "@type": "PostalAddress",
+                    "streetAddress": "Greater Toronto Area",
+                    "addressLocality": "Toronto",
+                    "addressRegion": "ON",
+                    "addressCountry": "CA"
+                }}
+                telephone="+1-848-248-0730"
+                image="https://josephacala.com/images/joe-portrait-1.jpg"
+            />
             <SEO
                 title="Automotive Sales Training Toronto & GTA | Joe Cala"
-                description="Premier automotive sales training in Toronto and the GTA. Trusted by Toronto Auto Group and Needacar to drive performance and retention."
-                keywords="automotive sales training Toronto, car sales coaching GTA, Toronto Auto Group, Needacar training, Joe Cala Canada"
+                description="Canada's premier automotive sales training. Trusted by Needacar.ca and Toronto Auto Group. On-site consulting for dealers in Toronto, Mississauga, and across Ontario."
+                keywords="automotive sales training Toronto, car sales coaching GTA, Toronto dealership consulting, Ontario sales trainer"
             />
 
             <section style={{ backgroundColor: '#0F102A', color: 'white', padding: '160px 0 100px', textAlign: 'center' }}>

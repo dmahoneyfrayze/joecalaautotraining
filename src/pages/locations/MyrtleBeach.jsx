@@ -3,6 +3,7 @@ import { MapPin, Users, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import Breadcrumbs from '../../components/Breadcrumbs';
+import { LocalBusinessSchema } from '../../components/SchemaMarkup';
 
 const MyrtleBeach = () => {
     return (
@@ -11,10 +12,23 @@ const MyrtleBeach = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <LocalBusinessSchema
+                name="JC Training & Development - HQ"
+                address={{
+                    "@type": "PostalAddress",
+                    "streetAddress": "Myrtle Beach",
+                    "addressLocality": "Myrtle Beach",
+                    "addressRegion": "SC",
+                    "postalCode": "29577",
+                    "addressCountry": "US"
+                }}
+                telephone="+1-848-248-0730"
+                image="https://josephacala.com/images/joe-portrait-1.jpg"
+            />
             <SEO
-                title="Sales Leadership Training Myrtle Beach, SC | Joe Cala"
-                description="The home of JC Training & Development. Professional sales coaching and leadership seminars in Myrtle Beach, SC."
-                keywords="sales training Myrtle Beach, business coaching SC, leadership seminars Myrtle Beach, Joe Cala HQ"
+                title="Sales Training Myrtle Beach & Charleston SC | Joe Cala"
+                description="Expert sales consulting and leadership training based in Myrtle Beach. JC Training serves the Carolinas with on-site dealership workshops and keynote speaking."
+                keywords="sales training Myrtle Beach, business coaching Charleston SC, dealership training South Carolina, Joe Cala"
             />
 
             <section style={{ backgroundColor: '#0F102A', color: 'white', padding: '160px 0 100px', textAlign: 'center' }}>

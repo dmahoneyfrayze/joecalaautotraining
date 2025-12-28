@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import ReviewWidget from '../components/ReviewWidget';
+import SEO from '../components/SEO';
 
 const Contact = () => {
     return (
@@ -9,6 +10,10 @@ const Contact = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="Contact Joe Cala | Book Your Sales Training Discovery Call"
+                description="Ready to transform your sales results? Contact JC Training & Development for mentorship, corporate workshops, or speaking engagements. Based in Myrtle Beach & Toronto."
+            />
             <section className="contact-hero" style={{ padding: '160px 0 60px', backgroundColor: 'var(--color-primary)', color: 'white', textAlign: 'center' }}>
                 <div className="container">
                     <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>Get In Touch</h1>
