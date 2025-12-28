@@ -1,10 +1,13 @@
+import { Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Users, Briefcase, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
-import SocialProof from '../components/SocialProof';
-import LeadMagnet from '../components/LeadMagnet';
 import FadeIn from '../components/FadeIn';
+
+// Lazy load heavy components below the fold
+const SocialProof = lazy(() => import('../components/SocialProof'));
+const LeadMagnet = lazy(() => import('../components/LeadMagnet'));
 
 const Home = () => {
     return (
@@ -249,11 +252,11 @@ const Home = () => {
                 </FadeIn>
             </section>
 
-            {/* Social Proof Section - REPLACED */}
-            <SocialProof />
-
-            {/* Lead Magnet - NEW */}
-            <LeadMagnet />
+            {/* SocialProof and LeadMagnet are loaded lazily to improve initial LCP */}
+            <Suspense fallback={<div style={{ height: '200px' }}></div>}>
+                <SocialProof />
+                <LeadMagnet />
+            </Suspense>
 
             {/* Final CTA */}
             <section className="final-cta" style={{ textAlign: 'center', padding: '120px 0', backgroundColor: 'var(--color-primary)', color: 'white' }}>

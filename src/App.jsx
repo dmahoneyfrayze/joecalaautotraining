@@ -18,11 +18,11 @@ const Academy = lazy(() => import('./pages/Academy'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 
-import Toronto from './pages/locations/Toronto';
-import MyrtleBeach from './pages/locations/MyrtleBeach';
-import SalesTraining from './pages/pillars/SalesTraining';
-import Corporate from './pages/Corporate';
-import Terms from './pages/Terms';
+const Toronto = lazy(() => import('./pages/locations/Toronto'));
+const MyrtleBeach = lazy(() => import('./pages/locations/MyrtleBeach'));
+const SalesTraining = lazy(() => import('./pages/pillars/SalesTraining'));
+const Corporate = lazy(() => import('./pages/Corporate'));
+const Terms = lazy(() => import('./pages/Terms'));
 
 function App() {
   const location = useLocation();
@@ -31,26 +31,34 @@ function App() {
     <div className="app">
       <ScrollToTop />
       <Header />
-      <AnimatePresence mode='wait'>
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/what-we-do" element={<WhatWeDo />} />
-          <Route path="/corporate" element={<Corporate />} />
-          <Route path="/academy" element={<Academy />} />
-          <Route path="/mentorship" element={<Mentorship />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          {/* Location & Pillar Pages */}
-          <Route path="/locations/toronto" element={<Toronto />} />
-          <Route path="/locations/myrtle-beach" element={<MyrtleBeach />} />
-          <Route path="/training/automotive-sales" element={<SalesTraining />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-        </Routes>
-      </AnimatePresence>
+      <Suspense fallback={<Loading />}>
+        <AnimatePresence mode='wait'>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/what-we-do" element={<WhatWeDo />} />
+            <Route path="/corporate" element={<Corporate />} />
+            <Route path="/academy" element={<Academy />} />
+            <Route path="/mentorship" element={<Mentorship />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            {/* Location & Pillar Pages */}
+            <Route path="/locations/toronto" element={<Toronto />} />
+            <Route path="/locations/myrtle-beach" element={<MyrtleBeach />} />
+            <Route path="/training/automotive-sales" element={<SalesTraining />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+          </Routes>
+        </AnimatePresence>
+      </Suspense>
       <Footer />
+      {/* Loading is now used as fallback, but we keep the global one if needed or remove it if redundant? 
+          Actually Loading seems to be a fixed overlay. Using it as fallback is fine. 
+          But keeping it at bottom might double it. 
+          Let's see: Loading.jsx probably listens to navigation state? 
+          For now, I'll keep the existing <Loading /> at the bottom too, but Suspense is safer. 
+      */}
       <Loading />
     </div>
   );

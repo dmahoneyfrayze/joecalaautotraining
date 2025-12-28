@@ -27,6 +27,7 @@ const ReviewWidget = () => {
                 scrolling='no'
                 title="Customer Reviews"
                 style={{ minWidth: '100%', width: '100%', border: 'none', overflow: 'hidden', minHeight: '400px' }} // Added minHeight to reduce shift
+                loading="lazy"
             ></iframe>
         </div>
     );

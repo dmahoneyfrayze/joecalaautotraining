@@ -130,7 +130,7 @@ const SocialProof = () => {
                                         backgroundColor: '#eee',
                                         border: '2px solid var(--color-accent)'
                                     }}>
-                                        <img src={t.image} alt={t.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        <img src={t.image} alt={t.name} width="60" height="60" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </div>
                                     <div style={{ textAlign: 'left' }}>
                                         <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--color-primary)' }}>{t.name}</h4>
