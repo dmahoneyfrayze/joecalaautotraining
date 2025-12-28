@@ -106,7 +106,12 @@ const DealershipGrowth = () => {
                                     <li style={{ display: 'flex', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> 100% turnover to Management (TO) on every deal.</li>
                                     <li style={{ display: 'flex', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> Daily 20-minute training sessions, non-negotiable.</li>
                                 </ul>
-                                <Link to="/training/automotive-sales" className="btn-secondary" style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>View The System</Link>
+                                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+                                    <Link to="/training/automotive-sales" className="btn-secondary" style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>View The System</Link>
+                                    <Link to="/blog/modern-automotive-sales-methodology" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'var(--color-primary)', fontWeight: 600 }}>
+                                        <BookOpen size={18} /> The New Road-to-the-Sale
+                                    </Link>
+                                </div>
                             </div>
                             <div style={{
                                 backgroundColor: '#f9fafb',
@@ -141,7 +146,12 @@ const DealershipGrowth = () => {
                                     <li style={{ display: 'flex', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> Use video follow-up to humanize the interaction.</li>
                                     <li style={{ display: 'flex', gap: '10px' }}><CheckCircle size={20} color="var(--color-accent)" /> Leverage tools like <strong>Frayze</strong> to automate initial engagement.</li>
                                 </ul>
-                                <Link to="/blog/frayze-growth-engine-vs-crm" className="btn-secondary" style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>Automate Follow-Up</Link>
+                                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+                                    <Link to="/blog/frayze-growth-engine-vs-crm" className="btn-secondary" style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>Automate Follow-Up</Link>
+                                    <Link to="/blog/frayze-growth-engine-vs-crm" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'var(--color-primary)', fontWeight: 600 }}>
+                                        <BookOpen size={18} /> Speed-to-Lead Guide
+                                    </Link>
+                                </div>
                             </div>
                             <div style={{
                                 backgroundColor: '#f9fafb',
