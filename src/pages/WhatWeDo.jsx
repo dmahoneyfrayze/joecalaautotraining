@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Zap, BookOpen, Target } from 'lucide-react';
+import { Shield, Zap, BookOpen, Target, MessageSquare, Lock } from 'lucide-react';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/Breadcrumbs';
 
@@ -121,23 +121,29 @@ const WhatWeDo = () => {
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                         {/* Frayze Card */}
-                        <div style={{ backgroundColor: 'white', padding: '2.5rem', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#0F102A' }}>Frayze.ca</h3>
-                            <div style={{ color: 'var(--color-accent)', fontWeight: 'bold', marginBottom: '1rem', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '1px' }}>The Growth Engine</div>
-                            <p style={{ marginBottom: '1.5rem', opacity: 0.8 }}>
-                                The "No Lead Left Behind" communication layer. Unifies SMS, Social, and Email into one inbox with <strong style={{ color: 'var(--color-primary)' }}>Missed Call Text Back</strong> automation.
+                        <div style={{ backgroundColor: 'white', padding: '2.5rem', borderRadius: '16px', boxShadow: '0 10px 40px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', border: '1px solid rgba(0,0,0,0.05)', transition: 'transform 0.3s ease' }}>
+                            <div style={{ width: '80px', height: '80px', borderRadius: '24px', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem', color: 'white', boxShadow: '0 8px 20px rgba(118, 75, 162, 0.3)' }}>
+                                <MessageSquare size={36} strokeWidth={1.5} />
+                            </div>
+                            <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem', color: '#0F102A', fontWeight: '800' }}>Frayze.ca</h3>
+                            <div style={{ color: '#764ba2', fontWeight: '700', marginBottom: '1.5rem', textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '2px' }}>The Growth Engine</div>
+                            <p style={{ marginBottom: '2rem', opacity: 0.8, lineHeight: '1.7' }}>
+                                The "No Lead Left Behind" communication layer. Unifies SMS, Social, and Email into one inbox with <strong style={{ color: '#764ba2' }}>Missed Call Text Back</strong> automation.
                             </p>
-                            <a href="https://frayze.ca" target="_blank" rel="noopener noreferrer" style={{ marginTop: 'auto', textDecoration: 'none', color: 'var(--color-primary)', fontWeight: 600 }}>Explore Frayze &rarr;</a>
+                            <a href="https://frayze.ca" target="_blank" rel="noopener noreferrer" style={{ marginTop: 'auto', display: 'inline-block', padding: '0.8rem 2rem', borderRadius: '50px', backgroundColor: '#f5f7fa', color: '#764ba2', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem', transition: 'all 0.2s' }}>Explore Frayze &rarr;</a>
                         </div>
 
                         {/* AutoCorp Card */}
-                        <div style={{ backgroundColor: 'white', padding: '2.5rem', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#0F102A' }}>AutoCorp.ai</h3>
-                            <div style={{ color: 'var(--color-accent)', fontWeight: 'bold', marginBottom: '1rem', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '1px' }}>Secure Trade & Credit</div>
-                            <p style={{ marginBottom: '1.5rem', opacity: 0.8 }}>
+                        <div style={{ backgroundColor: 'white', padding: '2.5rem', borderRadius: '16px', boxShadow: '0 10px 40px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', border: '1px solid rgba(0,0,0,0.05)', transition: 'transform 0.3s ease' }}>
+                            <div style={{ width: '80px', height: '80px', borderRadius: '24px', background: 'linear-gradient(135deg, #2af598 0%, #009efd 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem', color: 'white', boxShadow: '0 8px 20px rgba(0, 158, 253, 0.3)' }}>
+                                <Lock size={36} strokeWidth={1.5} />
+                            </div>
+                            <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem', color: '#0F102A', fontWeight: '800' }}>AutoCorp.ai</h3>
+                            <div style={{ color: '#009efd', fontWeight: '700', marginBottom: '1.5rem', textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '2px' }}>Secure Trade & Credit</div>
+                            <p style={{ marginBottom: '2rem', opacity: 0.8, lineHeight: '1.7' }}>
                                 Real-time credit decisions and trade valuations that integrate seamlessly with your sales flow, reducing fraud and speeding up the deal.
                             </p>
-                            <a href="https://autocorp.ai" target="_blank" rel="noopener noreferrer" style={{ marginTop: 'auto', textDecoration: 'none', color: 'var(--color-primary)', fontWeight: 600 }}>Visit AutoCorp &rarr;</a>
+                            <a href="https://autocorp.ai" target="_blank" rel="noopener noreferrer" style={{ marginTop: 'auto', display: 'inline-block', padding: '0.8rem 2rem', borderRadius: '50px', backgroundColor: '#f5f7fa', color: '#009efd', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem', transition: 'all 0.2s' }}>Visit AutoCorp &rarr;</a>
                         </div>
                     </div>
                 </div>
