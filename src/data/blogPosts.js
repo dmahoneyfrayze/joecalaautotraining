@@ -1,5 +1,49 @@
 export const blogPosts = [
   {
+    id: 8,
+    title: "The Death of the Old 'Road-to-the-Sale'",
+    slug: "death-of-old-road-to-sale",
+    date: "December 28, 2025",
+    author: "Joe Cala",
+    category: "Training",
+    excerpt: "The linear 10-step sales process is dead. The modern buyer enters the funnel sideways, backwards, and informed. Here is the new non-linear path to the sale.",
+    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200",
+    content: `
+      <h2>The Funnel is Broken</h2>
+      <p>For 40 years, we taught the "Road-to-the-Sale" as a straight line. Meet & Greet → Needs Analysis → Selection → Walkaround → Demo Drive → Service Walk → Office → Negotiation → F&I → Delivery. It was perfect. It was predictable.</p>
+      <p>It is also extinct.</p>
+      <p>Today's buyer does not walk onto the lot at Step 1. They often enter at Step 4 (Walkaround) digitally via YouTube. They skip Step 2 (Needs Analysis) because they've already built the car online. They arrive at your desk ready for Step 8 (Negotiation).</p>
+      <p>If you try to force a Step 8 customer back to Step 1, you don't just annoy them; you lose them. The old road was about <strong>control</strong>. The new road is about <strong>agility</strong>.</p>
+      
+      <h3>The Non-Linear Journey</h3>
+      <p>The modern road-to-the-sale looks more like a web than a line. A customer might:</p>
+      <ul>
+        <li><strong>Day 1:</strong> Watch a review of the SUV on TikTok (Awareness).</li>
+        <li><strong>Day 3:</strong> Build the price on the OEM website (Selection).</li>
+        <li><strong>Day 4:</strong> Email you asking "Is this specific VIN in stock?" (Isolation).</li>
+        <li><strong>Day 5:</strong> Ghost you because you answered "When can you come in?" instead of "Yes, here is a video of it."</li>
+      </ul>
+      <p>The "Meet & Greet" didn't happen on the pavement; it happened in their inbox. If you failed to build rapport digitally, you never got the chance to shake their hand.</p>
+      
+      <h3>The New Key Milestone: "Trust Validation"</h3>
+      <p>In the old model, trust was built during the demo drive. In the new model, trust must be established <strong>before they arrive</strong>. This is why we teach the "Video Introduction" as a non-negotiable step.</p>
+      <p>When a lead comes in, you don't call. You send a 30-second video: <em>"Hey [Name], I'm standing next to that Black AT4 you asked about. It's actually here. I noticed it has the sunroof you wanted. I'm going to pull it up front. Let me know if 2pm or 4pm works best."</em></p>
+      <p>That video validates availability, validates the condition, and validates <strong>you</strong> as a real human being. That is the new "Meet & Greet."</p>
+
+      <h3>Fluidity Wins</h3>
+      <p>The best salespeople in 2025 are fluid. They can jump into the process wherever the customer is. 
+      <br>If they are at the "Just Looking" stage, they perform a Needs Analysis. 
+      <br>If they are at the "Best Price" stage, they perform a Value Presentation.
+      <br>They don't strictly adhere to the checklist; they adhere to the <strong>customer's context</strong>.</p>
+
+      <div class="cta-box" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-light); border-left: 4px solid var(--color-primary); border-radius: 8px;">
+        <h4 style="margin-top: 0; color: var(--color-primary);">Agile Sales Training</h4>
+        <p>Learn how to handle the modern, non-linear buyer in our comprehensive <strong>Dealership Growth Blueprint</strong>.</p>
+        <a href="/growth/dealership-strategies" style="display: inline-block; padding: 0.8rem 1.5rem; background: var(--color-primary); color: white; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 1rem;">Read the Growth Strategy</a>
+      </div>
+    `
+  },
+  {
     id: 1,
     title: "The Silent Killer: Why High Turnover is Destroying Your Dealership (And How Culture Fixes It)",
     slug: "high-turnover-dealership-culture-fix",
