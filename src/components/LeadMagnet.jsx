@@ -3,13 +3,23 @@ import { motion } from 'framer-motion';
 import { Check, Mail, Download, ArrowRight } from 'lucide-react';
 import FadeIn from './FadeIn';
 
-const LeadMagnet = () => {
+const LeadMagnet = ({
+    title = "Master the Art of Objection Handling",
+    badgeText = "Free Resource",
+    description = "Stop losing deals to \"I need to think about it.\" Download our exclusive script book containing 50+ battle-tested responses to the most common customer objections.",
+    benefits = ['Word-for-word scripts', 'Price negotiation tactics', 'Psychology of closing'],
+    buttonText = "Send Me The Guide",
+    successTitle = "You're In!",
+    successMessage = "Check your email inbox for your free copy of the guide."
+}) => {
     const [email, setEmail] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [name, setName] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would integrate with your email marketing tool
+        // Integration placeholder
+        console.log("Lead Magnet Submitted:", { name, email, magnet: title });
         setSubmitted(true);
     };
 
@@ -38,19 +48,19 @@ const LeadMagnet = () => {
                                 border: '1px solid rgba(212, 175, 55, 0.3)'
                             }}>
                                 <Download size={18} color="var(--color-accent)" />
-                                <span style={{ color: 'var(--color-accent)', fontWeight: 600, fontSize: '0.9rem', letterSpacing: '0.5px' }}>Free Resource</span>
+                                <span style={{ color: 'var(--color-accent)', fontWeight: 600, fontSize: '0.9rem', letterSpacing: '0.5px' }}>{badgeText}</span>
                             </div>
 
                             <h2 style={{ fontSize: 'clamp(2.2rem, 5vw, 3rem)', marginBottom: '1.5rem', lineHeight: 1.1, fontFamily: 'var(--font-serif)' }}>
-                                Master the Art of <br /><span style={{ color: 'var(--color-accent)' }}>Objection Handling</span>
+                                {title}
                             </h2>
 
                             <p style={{ fontSize: '1.2rem', opacity: 0.9, marginBottom: '2.5rem', lineHeight: 1.7, maxWidth: '90%' }}>
-                                Stop losing deals to "I need to think about it." Download our exclusive script book containing 50+ battle-tested responses to the most common customer objections.
+                                {description}
                             </p>
 
                             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', marginBottom: '2rem' }}>
-                                {['Word-for-word scripts', 'Price negotiation tactics', 'Psychology of closing'].map((item, i) => (
+                                {benefits.map((item, i) => (
                                     <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                         <div style={{ backgroundColor: 'var(--color-accent)', borderRadius: '50%', padding: '4px', display: 'flex' }}>
                                             <Check size={14} color="var(--color-primary)" strokeWidth={4} />
@@ -78,6 +88,8 @@ const LeadMagnet = () => {
                                             type="text"
                                             id="name"
                                             required
+                                            value={name}
+                                            onChange={(e) => setName(e.target.value)}
                                             style={{
                                                 width: '100%',
                                                 padding: '1rem 1.2rem',
@@ -117,7 +129,7 @@ const LeadMagnet = () => {
                                     </div>
 
                                     <button type="submit" className="btn-primary" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.8rem', padding: '1.2rem' }}>
-                                        Send Me The Guide <ArrowRight size={20} />
+                                        {buttonText} <ArrowRight size={20} />
                                     </button>
 
                                     <p style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: '#999', textAlign: 'center' }}>
@@ -148,9 +160,9 @@ const LeadMagnet = () => {
                                     }}>
                                         <Check size={40} color="#1e7e34" />
                                     </div>
-                                    <h3 style={{ color: 'var(--color-primary)', marginBottom: '1rem' }}>You're In!</h3>
+                                    <h3 style={{ color: 'var(--color-primary)', marginBottom: '1rem' }}>{successTitle}</h3>
                                     <p style={{ color: '#666', marginBottom: '2rem' }}>
-                                        Check your email inbox for your free copy of the Objection Handling Guide.
+                                        {successMessage}
                                     </p>
                                     <button onClick={() => setSubmitted(false)} style={{ color: 'var(--color-accent)', fontWeight: 600 }}>
                                         Back to form
