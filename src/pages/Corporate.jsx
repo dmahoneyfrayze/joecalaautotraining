@@ -106,14 +106,14 @@ const Corporate = () => {
                                 <Link to="/contact" className="btn-primary">Inquire About Availability</Link>
                             </div>
                             <div style={{ flex: '1 1 300px' }}>
-                                <img src="/images/workshop.jpg" alt="Sales Workshop" style={{ width: '100%', borderRadius: '12px', backgroundColor: '#ddd', height: '300px', objectFit: 'cover' }} />
+                                <img src="/images/sales-workshop.webp" alt="Sales Workshop" style={{ width: '100%', borderRadius: '12px', backgroundColor: '#ddd', height: '300px', objectFit: 'cover' }} />
                             </div>
                         </div>
 
                         {/* Solution 2 */}
                         <div style={{ display: 'flex', flexWrap: 'wrap-reverse', gap: '3rem', alignItems: 'center', backgroundColor: 'white', padding: '3rem', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
                             <div style={{ flex: '1 1 300px' }}>
-                                <img src="/images/executive.jpg" alt="Executive Coaching" style={{ width: '100%', borderRadius: '12px', backgroundColor: '#ddd', height: '300px', objectFit: 'cover' }} />
+                                <img src="/images/executive-coaching.webp" alt="Executive Coaching" style={{ width: '100%', borderRadius: '12px', backgroundColor: '#ddd', height: '300px', objectFit: 'cover' }} />
                             </div>
                             <div style={{ flex: '1 1 300px' }}>
                                 <div style={{ color: 'var(--color-accent)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.5rem' }}>Leadership</div>

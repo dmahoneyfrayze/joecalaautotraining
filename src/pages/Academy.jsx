@@ -163,7 +163,7 @@ const Academy = () => {
                         >
                             <div className="glass-light" style={{ padding: '3rem', borderRadius: '24px', border: '1px solid #f0f0f0', boxShadow: '0 20px 60px rgba(0,0,0,0.05)', position: 'relative', overflow: 'hidden' }}>
                                 <img
-                                    src="/images/group-training.jpg"
+                                    src="/images/group-training.webp"
                                     alt="Joe Cala Group Training Session"
                                     style={{ width: '100%', borderRadius: '15px', marginBottom: '2rem' }}
                                 />

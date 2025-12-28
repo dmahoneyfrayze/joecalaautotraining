@@ -68,12 +68,18 @@ const DealershipGrowth = () => {
                                 </ul>
                                 <Link to="/corporate" className="btn-secondary" style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>Fix Your Culture</Link>
                             </div>
-                            <div style={{ backgroundColor: '#f9fafb', padding: '3rem', borderRadius: '20px' }}>
-                                <Users size={60} color="var(--color-accent)" style={{ marginBottom: '1.5rem' }} />
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>The Insight</h3>
-                                <p style={{ fontStyle: 'italic', opacity: 0.8, fontSize: '1.1rem' }}>
-                                    "When you treat your people like a commodity, your customers will treat your vehicle like a commodity. Value starts internally."
-                                </p>
+                            <div style={{
+                                backgroundColor: '#f9fafb',
+                                padding: '1.5rem',
+                                borderRadius: '20px',
+                                overflow: 'hidden',
+                                boxShadow: '0 10px 30px rgba(0,0,0,0.05)'
+                            }}>
+                                <img
+                                    src="/images/team-collaboration.webp"
+                                    alt="Team Collaboration and Culture"
+                                    style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+                                />
                             </div>
                         </div>
                     </FadeIn>
@@ -96,12 +102,19 @@ const DealershipGrowth = () => {
                                 </ul>
                                 <Link to="/training/automotive-sales" className="btn-secondary" style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>View The System</Link>
                             </div>
-                            <div style={{ backgroundColor: '#f9fafb', padding: '3rem', borderRadius: '20px', order: 0 }}>
-                                <Target size={60} color="var(--color-accent)" style={{ marginBottom: '1.5rem' }} />
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>The Insight</h3>
-                                <p style={{ fontStyle: 'italic', opacity: 0.8, fontSize: '1.1rem' }}>
-                                    "Your customers crave structure. A defined process builds trust because it removes the fear of the unknown."
-                                </p>
+                            <div style={{
+                                backgroundColor: '#f9fafb',
+                                padding: '1.5rem',
+                                borderRadius: '20px',
+                                overflow: 'hidden',
+                                order: 0,
+                                boxShadow: '0 10px 30px rgba(0,0,0,0.05)'
+                            }}>
+                                <img
+                                    src="/images/sales-process.webp"
+                                    alt="Automotive Sales Process"
+                                    style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+                                />
                             </div>
                         </div>
                     </FadeIn>
@@ -124,14 +137,19 @@ const DealershipGrowth = () => {
                                 </ul>
                                 <Link to="/blog/frayze-growth-engine-vs-crm" className="btn-secondary" style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>Automate Follow-Up</Link>
                             </div>
-                            <div style={{ backgroundColor: '#f9fafb', padding: '3rem', borderRadius: '20px' }}>
-                                <TrendingUp size={60} color="var(--color-accent)" style={{ marginBottom: '1.5rem' }} />
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>The Insight</h3>
-                                <p style={{ fontStyle: 'italic', opacity: 0.8, fontSize: '1.1rem' }}>
-                                    "If you don't answer the lead in 5 minutes, you might as well have not paid for it. Speed is the currency of the internet."
-                                </p>
+                            <div style={{
+                                backgroundColor: '#f9fafb',
+                                padding: '1.5rem',
+                                borderRadius: '20px',
+                                overflow: 'hidden',
+                                boxShadow: '0 10px 30px rgba(0,0,0,0.05)'
+                            }}>
+                                <img
+                                    src="/images/crm-planning.webp"
+                                    alt="CRM Planning and Lead Management"
+                                    style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+                                />
                             </div>
-                        </div>
                     </FadeIn>
 
                     {/* CTA Section */}
