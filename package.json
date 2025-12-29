@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.js",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prerender": "node scripts/prerender.js",
-    "build:all": "vite build && node scripts/prerender.js"
+    "prerender": "node scripts/prerender.js"
   },
   "dependencies": {
     "framer-motion": "^12.23.26",
