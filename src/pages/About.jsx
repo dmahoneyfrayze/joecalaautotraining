@@ -13,8 +13,8 @@ const About = () => {
         >
             <SEO
                 title="About Joe Cala | Founder of JC Training & Development"
-                description="Learn about Joe Cala's journey from Auto Dealer University to building a premier sales training and leadership coaching firm serving Canada and the US."
-                keywords="Joe Cala bio, sales training expert, Auto Dealer University, automotive leadership coach, faith based business training"
+                description="Learn about Joe Cala's journey building a premier sales training and leadership coaching firm serving Canada and the US."
+                keywords="Joe Cala bio, sales training expert, automotive leadership coach, faith based business training"
             />
             <section className="about-hero" style={{ padding: '160px 0 100px', backgroundColor: 'var(--color-bg-dark)', color: 'white' }}>
                 <div className="container">
@@ -33,7 +33,7 @@ const About = () => {
                                 With over <strong>25 years</strong> of experience in automotive sales leadership and professional ministry, Joseph Acala brings a unique, purpose-driven perspective to the world of consulting and training.
                             </p>
                             <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', opacity: 0.8, color: 'rgba(255, 255, 255, 0.8)' }}>
-                                Joe's authority in the industry was solidified during his time at <strong>Auto Dealer University</strong>, where he developed many of the training protocols still in use across North America today.
+                                Joe's authority in the industry was solidified during his tenure leading <strong>national training programs</strong>, where he developed many of the protocols still in use across North America today.
                             </p>
                             <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', opacity: 0.8, color: 'rgba(255, 255, 255, 0.8)' }}>
                                 He has worked with over <strong>470 dealerships</strong> and mentored more than <strong>7,300 individuals</strong> across the <strong>United States and Canada</strong>, helping them bridge the gap between financial success and personal fulfillment.

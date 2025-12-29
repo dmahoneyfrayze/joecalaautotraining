@@ -135,9 +135,9 @@ const Academy = () => {
                                 <div style={{ width: '50px', height: '2px', backgroundColor: 'var(--color-accent)' }}></div>
                                 <span style={{ fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--color-primary)' }}>Heritage of Excellence</span>
                             </div>
-                            <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>Formerly of Auto Dealer University</h2>
+                            <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>World-Class Training Heritage</h2>
                             <p style={{ fontSize: '1.15rem', color: '#444', marginBottom: '1.5rem', lineHeight: 1.8 }}>
-                                Joseph Cala's impact on the automotive industry began at <strong>Auto Dealer University</strong>, where he pioneered sales frameworks that are still used by hundreds of dealerships today.
+                                Joseph Cala's impact on the automotive industry began with <strong>leading national training organizations</strong>, where he pioneered sales frameworks that are still used by hundreds of dealerships today.
                             </p>
                             <p style={{ fontSize: '1.15rem', color: '#444', marginBottom: '2.5rem', lineHeight: 1.8 }}>
                                 Today, he has expanded that authority across Canada and the United States, providing a bridge between tactical sales mastery and purpose-driven leadership. Whether you are in Toronto or Texas, the principles of elite sales remain the same.

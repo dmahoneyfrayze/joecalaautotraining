@@ -32,7 +32,7 @@ const SEO = ({ title, description, keywords, canonical, image }) => {
             metaKeywords.name = 'keywords';
             document.head.appendChild(metaKeywords);
         }
-        metaKeywords.setAttribute('content', keywords || 'auto sales training, dealership consulting Canada, US auto sales, sales mentorship, Joe Cala, Auto Dealer University');
+        metaKeywords.setAttribute('content', keywords || 'auto sales training, dealership consulting Canada, US auto sales, sales mentorship, Joe Cala');
 
         // Update Canonical
         let linkCanonical = document.querySelector('link[rel="canonical"]');

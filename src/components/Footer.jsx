@@ -34,7 +34,7 @@ const Footer = () => {
                         <h3 style={{ marginBottom: '1.5rem', fontSize: '1.2rem' }}>Experience</h3>
                         <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', opacity: 0.8 }}>
                             <li><Link to="/about">About Joe Cala</Link></li>
-                            <li><span style={{ color: 'var(--color-accent)' }}>Formerly:</span> Auto Dealer University</li>
+
                             <li><span style={{ color: 'var(--color-accent)' }}>Specialty:</span> NA Auto Sales</li>
                             <li><Link to="/contact">Consultation</Link></li>
                         </ul>
