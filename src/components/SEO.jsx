@@ -1,152 +1,106 @@
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
 const SEO = ({ title, description, keywords, canonical, image }) => {
     const location = useLocation();
 
-    useEffect(() => {
-        // Update Title
-        const fullTitle = `${title} | Joe Cala - Sales Training & Leadership`;
-        document.title = fullTitle;
+    // Construct full title
+    const fullTitle = `${title} | Joe Cala - Sales Training & Leadership`;
 
-        // Use provided image or fallback to logo. Handle relative paths.
-        let imagePath = image || '/images/logo.png';
-        if (imagePath.startsWith('/')) {
-            imagePath = `https://josephacala.com${imagePath}`;
-        }
-        const socialImage = imagePath;
+    // Construct image path
+    let imagePath = image || '/images/logo.png';
+    if (imagePath.startsWith('/')) {
+        imagePath = `https://josephacala.com${imagePath}`;
+    }
+    const socialImage = imagePath;
 
-        // Update Description
-        let metaDescription = document.querySelector('meta[name="description"]');
-        if (!metaDescription) {
-            metaDescription = document.createElement('meta');
-            metaDescription.name = 'description';
-            document.head.appendChild(metaDescription);
-        }
-        metaDescription.setAttribute('content', description || 'Master auto sales and leadership with Joe Cala. Elite training for the US and Canada markets.');
+    // Construct Canonical URL
+    const siteUrl = window.location.origin;
+    let canonicalPath = canonical || `${siteUrl}${location.pathname}`;
+    if (!canonicalPath.endsWith('/')) {
+        canonicalPath += '/';
+    }
 
-        // Update Keywords
-        let metaKeywords = document.querySelector('meta[name="keywords"]');
-        if (!metaKeywords) {
-            metaKeywords = document.createElement('meta');
-            metaKeywords.name = 'keywords';
-            document.head.appendChild(metaKeywords);
-        }
-        metaKeywords.setAttribute('content', keywords || 'auto sales training, dealership consulting Canada, US auto sales, sales mentorship, Joe Cala');
-
-        // Update Canonical
-        let linkCanonical = document.querySelector('link[rel="canonical"]');
-        if (!linkCanonical) {
-            linkCanonical = document.createElement('link');
-            linkCanonical.rel = 'canonical';
-            document.head.appendChild(linkCanonical);
-        }
-        const siteUrl = window.location.origin;
-        let canonicalPath = canonical || `${siteUrl}${location.pathname}`;
-        if (!canonicalPath.endsWith('/')) {
-            canonicalPath += '/';
-        }
-        linkCanonical.setAttribute('href', canonicalPath);
-
-        // Update Open Graph (OG) & Twitter tags
-        const ogTags = [
-            { property: 'og:title', content: fullTitle },
-            { property: 'og:description', content: description },
-            { property: 'og:image', content: socialImage },
-            { property: 'og:url', content: canonical || `${siteUrl}${location.pathname}` },
-            { property: 'og:type', content: 'website' },
-            { property: 'twitter:card', content: 'summary_large_image' },
-            { property: 'twitter:title', content: fullTitle },
-            { property: 'twitter:description', content: description },
-            { property: 'twitter:image', content: socialImage },
-        ];
-
-        ogTags.forEach(tag => {
-            let element = document.querySelector(`meta[property="${tag.property}"]`);
-            if (!element) {
-                // Try searching by name for twitter tags if property search fails (common compatibility)
-                element = document.querySelector(`meta[name="${tag.property}"]`);
-            }
-            if (!element) {
-                element = document.createElement('meta');
-                // Use 'name' for twitter cards, 'property' for OG
-                if (tag.property.startsWith('twitter:')) {
-                    element.setAttribute('name', tag.property);
-                } else {
-                    element.setAttribute('property', tag.property);
-                }
-                document.head.appendChild(element);
-            }
-            element.setAttribute('content', tag.content);
-        });
-
-        // Update JSON-LD
-        const scriptId = 'json-ld-seo';
-        let script = document.getElementById(scriptId);
-        if (script) {
-            script.remove();
-        }
-
-        const defaultSchema = {
-            "@context": "https://schema.org",
-            "@type": "Consultant",
-            "name": "Joe Cala - JC Training & Development",
-            "image": "https://josephacala.com/images/logo.png",
-            "@id": "https://josephacala.com/#organization",
-            "url": "https://josephacala.com",
-            "telephone": "+1 848-248-0730",
-            "address": [
-                {
-                    "@type": "PostalAddress",
-                    "streetAddress": "",
-                    "addressLocality": "Myrtle Beach",
-                    "addressRegion": "SC",
-                    "postalCode": "29577",
-                    "addressCountry": "US"
-                },
-                {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Toronto",
-                    "addressRegion": "ON",
-                    "addressCountry": "CA"
-                }
-            ],
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "33.6891",
-                "longitude": "-78.8867"
+    // Default Schema
+    const defaultSchema = {
+        "@context": "https://schema.org",
+        "@type": "Consultant",
+        "name": "Joe Cala - JC Training & Development",
+        "image": "https://josephacala.com/images/logo.png",
+        "@id": "https://josephacala.com/#organization",
+        "url": "https://josephacala.com",
+        "telephone": "+1 848-248-0730",
+        "address": [
+            {
+                "@type": "PostalAddress",
+                "streetAddress": "",
+                "addressLocality": "Myrtle Beach",
+                "addressRegion": "SC",
+                "postalCode": "29577",
+                "addressCountry": "US"
             },
-            "sameAs": [
-                "https://www.linkedin.com/in/josephacala/",
-                "https://www.facebook.com/josephacala",
-                "https://www.youtube.com/@JosephCala-SalesLeadership",
-                "https://jctrainingacademy.thinkific.com/"
-            ],
-            "priceRange": "$$$"
-        };
+            {
+                "@type": "PostalAddress",
+                "addressLocality": "Toronto",
+                "addressRegion": "ON",
+                "addressCountry": "CA"
+            }
+        ],
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "33.6891",
+            "longitude": "-78.8867"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/josephacala/",
+            "https://www.facebook.com/josephacala",
+            "https://www.youtube.com/@JosephCala-SalesLeadership",
+            "https://jctrainingacademy.thinkific.com/"
+        ],
+        "priceRange": "$$$"
+    };
 
-        const jsonLd = {
-            "@context": "https://schema.org",
-            ...(title.includes("Academy") ? {
-                "@type": "Course",
-                "name": "JC Training Academy",
-                "description": description,
-                "provider": {
-                    "@type": "Person",
-                    "name": "Joe Cala"
-                }
-            } : defaultSchema)
-        };
+    // Course Schema conditional logic
+    const jsonLd = {
+        "@context": "https://schema.org",
+        ...(title.includes("Academy") ? {
+            "@type": "Course",
+            "name": "JC Training Academy",
+            "description": description,
+            "provider": {
+                "@type": "Person",
+                "name": "Joe Cala"
+            }
+        } : defaultSchema)
+    };
 
-        script = document.createElement('script');
-        script.id = scriptId;
-        script.type = 'application/ld+json';
-        script.text = JSON.stringify(jsonLd);
-        document.head.appendChild(script);
+    return (
+        <Helmet>
+            {/* Standard Metadata */}
+            <title>{fullTitle}</title>
+            <meta name="description" content={description || 'Master auto sales and leadership with Joe Cala. Elite training for the US and Canada markets.'} />
+            <meta name="keywords" content={keywords || 'auto sales training, dealership consulting Canada, US auto sales, sales mentorship, Joe Cala'} />
+            <link rel="canonical" href={canonicalPath} />
 
-    }, [title, description, keywords, canonical, location]);
+            {/* Facebook / Open Graph */}
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={canonical || `${siteUrl}${location.pathname}`} />
+            <meta property="og:title" content={fullTitle} />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content={socialImage} />
 
-    return null;
+            {/* Twitter */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={fullTitle} />
+            <meta name="twitter:description" content={description} />
+            <meta name="twitter:image" content={socialImage} />
+
+            {/* JSON-LD Schema */}
+            <script type="application/ld+json">
+                {JSON.stringify(jsonLd)}
+            </script>
+        </Helmet>
+    );
 };
 
 export default SEO;

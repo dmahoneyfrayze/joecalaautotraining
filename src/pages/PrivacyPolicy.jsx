@@ -15,6 +15,7 @@ const PrivacyPolicy = () => {
                 title="Privacy Policy | JC Training & Development"
                 description="Our privacy policy details how we handle and protect your data at JC Training & Development."
                 keywords="privacy policy, data protection, JC Training"
+                image="/images/logo.png"
             />
             <Breadcrumbs />
             <h1 style={{ marginBottom: '2rem' }}>Privacy Policy</h1>

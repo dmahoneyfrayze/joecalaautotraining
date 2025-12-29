@@ -13,6 +13,7 @@ const Contact = () => {
             <SEO
                 title="Contact Joe Cala | Book Your Sales Training Discovery Call"
                 description="Ready to transform your sales results? Contact JC Training & Development for mentorship, corporate workshops, or speaking engagements. Based in Myrtle Beach & Toronto."
+                image="/images/joe-portrait-2.jpg"
             />
             <section className="contact-hero" style={{ padding: '160px 0 60px', backgroundColor: 'var(--color-primary)', color: 'white', textAlign: 'center' }}>
                 <div className="container">

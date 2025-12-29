@@ -15,6 +15,7 @@ const Terms = () => {
                 title="Terms & Conditions | JC Training & Development"
                 description="Our specific terms and conditions for using the JC Training & Development website and services."
                 keywords="terms and conditions, legal, JC Training"
+                image="/images/logo.png"
             />
             <Breadcrumbs />
             <h1 style={{ marginBottom: '2rem' }}>Terms & Conditions</h1>
